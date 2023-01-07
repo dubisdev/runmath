@@ -1,0 +1,22 @@
+@import "the-new-css-reset";
+
+body {
+  overflow: hidden;
+  margin: 0;
+  padding: 0 2px;
+  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+    monospace;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  --bg-color: rgb(163, 200, 255);
+}
+
+.inputBox {
+  background-color: var(--bg-color);
+  position: relative;
+  display: block;
+  width: 95%;
+  margin: 0 auto;
+  height: 42px;
+  font-size: xx-large;
+}
