@@ -4,7 +4,7 @@
 <br/>
 <br/>
 <p align="center">
-<img src="https://user-images.githubusercontent.com/77246331/212145037-2e85ef94-920f-4c3c-ac27-b57fc301b4b2.png" align="center" />
+<img src="https://user-images.githubusercontent.com/77246331/212146849-aa68d8cb-c7d5-452d-9ce7-c6983ed8ee58.gif" align="center" />
 
 
 ## Available Shortcuts
