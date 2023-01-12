@@ -2,6 +2,10 @@
 
 > Do math, quickly.
 
+<p align="center">
+<img src="https://user-images.githubusercontent.com/77246331/212145037-2e85ef94-920f-4c3c-ac27-b57fc301b4b2.png" align="center" />
+
+
 ## Available Shortcuts
 
 - `Alt+M` to toggle the visibility of the app
