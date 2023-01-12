@@ -1,4 +1,4 @@
-import create from "zustand";
+import { create } from "zustand";
 import { calculateResult } from "../utils/runinput";
 
 interface BasicCalculatorState {

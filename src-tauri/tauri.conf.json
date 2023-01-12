@@ -8,7 +8,7 @@
   },
   "package": {
     "productName": "runmath",
-    "version": "0.1.0"
+    "version": "../package.json"
   },
   "tauri": {
     "allowlist": {
@@ -24,16 +24,14 @@
       "window": {
         "hide": true,
         "setFocus": true,
-        "show": true
+        "show": true,
+        "startDragging": true
       }
     },
     "bundle": {
       "active": true,
       "category": "Utility",
       "copyright": "David Jiménez Ⓒ 2023",
-      "deb": {
-        "depends": []
-      },
       "externalBin": [],
       "icon": [
         "icons/32x32.png",
@@ -44,16 +42,12 @@
       ],
       "identifier": "dev.dubis.runmath",
       "longDescription": "Do math, quickly 🚀",
-      "macOS": {
-        "entitlements": null,
-        "exceptionDomain": "",
-        "frameworks": [],
-        "providerShortName": null,
-        "signingIdentity": null
-      },
       "resources": [],
       "shortDescription": "",
-      "targets": "all",
+      "targets": [
+        "msi",
+        "updater"
+      ],
       "windows": {
         "certificateThumbprint": null,
         "digestAlgorithm": "sha256",
