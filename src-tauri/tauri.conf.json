@@ -12,7 +12,20 @@
   },
   "tauri": {
     "allowlist": {
-      "all": true
+      "globalShortcut": {
+        "all": true
+      },
+      "clipboard": {
+        "writeText": true
+      },
+      "process": {
+        "exit": true
+      },
+      "window": {
+        "hide": true,
+        "setFocus": true,
+        "show": true
+      }
     },
     "bundle": {
       "active": true,
