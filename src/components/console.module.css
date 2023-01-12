@@ -1,0 +1,29 @@
+.consoleInput {
+    height: 100%;
+    font-size: xx-large;
+    position: relative;
+    display: block;
+    width: 100%;
+    outline: none;
+    border: none;
+    z-index: 1;
+    caret-color: transparent;
+}
+
+.consoleInput:focus-visible {
+    caret-color: black;
+}
+
+.consoleInput::placeholder {
+    color: cornflowerblue;
+}
+
+.consoleResult {
+    height: 100%;
+    font-size: xx-large;
+    position: absolute;
+    width: 100%;
+    z-index: 0;
+    color: rgba(39, 39, 39, 0.525);
+
+}

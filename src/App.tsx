@@ -1,20 +1,12 @@
 import { ConsoleInput } from "./components/ConsoleInput";
-import { ResultView } from "./components/ResultView";
+import { ConsoleResult } from "./components/ConsoleResult";
+import styles from "./app.module.css";
 
 export function App() {
   return (
-    <div
-      data-tauri-drag-region
-      style={{
-        backgroundColor: "var(--bg-color)",
-        borderRadius: "10px",
-        border: "2px solid black",
-        boxShadow: "2px 3px 12px -8px rgba(0,0,0,0.8)",
-        WebkitBoxShadow: "2px 3px 12px -8px rgba(0,0,0,0.8)",
-      }}
-    >
-      <div className="inputBox">
-        <ResultView />
+    <div data-tauri-drag-region className={styles.appContainer}>
+      <div className={styles.inputBoxLayout}>
+        <ConsoleResult />
         <ConsoleInput />
       </div>
     </div>

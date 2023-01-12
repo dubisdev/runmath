@@ -10,13 +10,3 @@ body {
   -moz-osx-font-smoothing: grayscale;
   --bg-color: rgb(163, 200, 255);
 }
-
-.inputBox {
-  background-color: var(--bg-color);
-  position: relative;
-  display: block;
-  width: 95%;
-  margin: 0 auto;
-  height: 42px;
-  font-size: xx-large;
-}

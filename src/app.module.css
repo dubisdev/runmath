@@ -1,0 +1,17 @@
+.appContainer {
+    background-color: var(--bg-color);
+    border-radius: 10px;
+    border: 2px solid black;
+    box-shadow: 2px 3px 12px -8px rgba(0, 0, 0, 0.8);
+    -webkit-box-shadow: 2px 3px 12px -8px rgba(0, 0, 0, 0.8);
+}
+
+.inputBoxLayout {
+    background-color: var(--bg-color);
+    position: relative;
+    display: block;
+    width: 95%;
+    margin: 0 auto;
+    height: 42px;
+    font-size: xx-large;
+}
