@@ -1,7 +1,8 @@
 <h1>RunMath<img src="./src-tauri/icons/128x128.png" align="right" /></h1>
 
 > Do math, quickly.
-
+<br/>
+<br/>
 <p align="center">
 <img src="https://user-images.githubusercontent.com/77246331/212145037-2e85ef94-920f-4c3c-ac27-b57fc301b4b2.png" align="center" />
 
