@@ -51,13 +51,20 @@ jobs:
         run: yarn && yarn build
       
       - name: bump package version
-        run: npm pkg set "version"="${{ needs.semantic-release.outputs.release_version }}"
+        run: npm pkg set version="${{ needs.semantic-release.outputs.release_version }}"
+
+      - name: get latest release id
+        id: latest_release_id
+        uses: actions/github-script@v6
+        with:
+          script: |
+            github.rest.repos.getLatestRelease({ 
+              owner: context.repo.owner,
+              repo: context.repo.repo
+            }).then(res => res.data.id)
 
       - uses: tauri-apps/tauri-action@v0
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         with:
-          tagName: __VERSION__ # the action automatically replaces \_\_VERSION\_\_ with the app version
-          releaseName: 'v__VERSION__'
-          releaseDraft: false
-          prerelease: false
+          releaseId: ${{ steps.latest_release_id.outputs.result }}
