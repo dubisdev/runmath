@@ -10,12 +10,15 @@ jobs:
 
     steps:
       - uses: actions/checkout@v3
+
       - name: setup node
         uses: actions/setup-node@v3
         with:
           node-version: 18
+
       - name: install dependencies
         run: yarn
+
       - name: Semantic Release
         id: semantic
         uses: cycjimmy/semantic-release-action@v3
@@ -23,14 +26,16 @@ jobs:
           semantic_version: 19
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+
       - name: Update packages to release
         if: steps.semantic.outputs.new_release_published == 'true'
 
       - name: install Rust stable
         uses: dtolnay/rust-toolchain@stable
-
+ 
       - name: install app dependencies and build it
         run: yarn && yarn build
+
       - uses: tauri-apps/tauri-action@v0
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
