@@ -6,7 +6,7 @@ on:
 
 jobs:
   semantic-release:
-    runs-on: windows-latest
+    runs-on: ubuntu-latest
 
     outputs:
       releaseinfo: ${{ steps.semantic.outputs }}
