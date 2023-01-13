@@ -9,7 +9,8 @@ jobs:
     runs-on: ubuntu-latest
 
     outputs:
-      releaseinfo: ${{ steps.semantic.outputs }}
+      new_release: ${{ steps.semantic.outputs.new_release_published }}
+      release_version: ${{ steps.semantic.outputs.new_release_version }}
 
     steps:
       - uses: actions/checkout@v3
@@ -33,7 +34,7 @@ jobs:
   build-executable:
     runs-on: windows-latest
     needs: semantic-release
-    if: needs.semantic-release.outputs.releaseinfo.new_release_published == 'true'
+    if: needs.semantic-release.outputs.new_release == 'true'
 
     steps:
       - uses: actions/checkout@v3
@@ -50,7 +51,7 @@ jobs:
         run: yarn && yarn build
       
       - name: bump package version
-        run: npm pkg set "version"="${{ needs.semantic-release.outputs.releaseinfo.new_release_version }}"
+        run: npm pkg set "version"="${{ needs.semantic-release.outputs.release_version }}"
 
       - uses: tauri-apps/tauri-action@v0
         env:
