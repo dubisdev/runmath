@@ -44,6 +44,10 @@ jobs:
       - name: install Rust stable
         uses: dtolnay/rust-toolchain@stable
  
+      - uses: Swatinem/rust-cache@v2
+        with:
+          workspaces: "./src-tauri -> target"
+
       - name: Install app dependencies
         run: yarn
       
@@ -69,20 +73,3 @@ jobs:
         with:
           releaseId: ${{ steps.latest_release_id.outputs.result }}
 
-      # - name: Upload files to release
-      #   uses: actions/github-script@v6
-      #   env:
-      #     paths: ${{ steps.tauri_action.outputs.artifactPaths }}
-      #     release_id: ${{ steps.latest_release_id.outputs.result }}
-      #   with:
-      #     script: |
-      #       const PATHS = JSON.parse(process.env.paths)
-
-      #       PATHS.map(async (path) => {
-      #         await github.rest.repos.uploadReleaseAsset({
-      #           owner: context.repo.owner,
-      #           repo: context.repo.repo,
-      #           release_id: process.env.release_id,
-      #           name: path.split('\\').pop(),
-      #           data: require('fs').readFileSync(path)
-      #       })
