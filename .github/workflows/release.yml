@@ -64,7 +64,26 @@ jobs:
             }).then(res => res.data.id)
 
       - uses: tauri-apps/tauri-action@v0
+        id: tauri_action
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         with:
           releaseId: ${{ steps.latest_release_id.outputs.result }}
+        
+      - name: Upload files to release
+        uses: actions/github-script@v6
+        env:
+          paths: ${{ steps.tauri_action.outputs.artifactPaths }}
+          release_id: ${{ steps.latest_release_id.outputs.result }}
+        with:
+          script: |
+            const PATHS = JSON.parse(process.env.paths)
+
+            PATHS.map(async (path) => {
+              await github.rest.repos.uploadReleaseAsset({
+                owner: context.repo.owner,
+                repo: context.repo.repo,
+                release_id: process.env.release_id,
+                name: path.split('\\').pop(),
+                data: require('fs').readFileSync(path)
+            })
