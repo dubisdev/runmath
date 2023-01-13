@@ -22,7 +22,9 @@
         "exit": true
       },
       "window": {
+        "create": true,
         "hide": true,
+        "unminimize": true,
         "setFocus": true,
         "show": true,
         "startDragging": true
@@ -62,10 +64,10 @@
     },
     "windows": [
       {
+        "label": "main",
         "fullscreen": false,
         "height": 80,
         "resizable": false,
-        "title": "runmath",
         "width": 700,
         "center": true,
         "decorations": false,
