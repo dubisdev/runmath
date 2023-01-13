@@ -1,5 +1,5 @@
-import { ConsoleInput } from "./components/ConsoleInput";
-import { ConsoleResult } from "./components/ConsoleResult";
+import { ConsoleInput } from "@components/ConsoleInput";
+import { ConsoleResult } from "@components/ConsoleResult";
 import styles from "./app.module.css";
 
 export function App() {

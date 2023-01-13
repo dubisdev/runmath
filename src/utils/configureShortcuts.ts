@@ -1,6 +1,6 @@
 import { register, unregisterAll } from "@tauri-apps/api/globalShortcut";
 import { exit } from "@tauri-apps/api/process";
-import { createSettingsPage } from "./initSettingsPage";
+import { createSettingsPage } from "./settingsPageLauncher";
 import { toggleWindowVisibility } from "./toggleWindowView";
 
 export const configureShortcuts = () => {
@@ -20,6 +20,7 @@ export const configureShortcuts = () => {
     }
 
     if (isSettingsCommand(e)) {
+      // TODO - Finish settings page so this can be enabled
       createSettingsPage();
     }
   });

@@ -1,4 +1,4 @@
-import { useCalculatorStore } from "../state/calculator";
+import { useCalculatorStore } from "@state/calculator";
 import styles from "./console.module.css";
 
 const dateAsSum = new Date().toLocaleDateString().split("/").join("+");

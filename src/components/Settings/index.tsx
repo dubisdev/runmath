@@ -6,9 +6,10 @@ export const Settings = () => {
       </div>
 
       {/* a toggle  */}
-      <label htmlFor="toggle">Toggle</label>
-      <input type="checkbox" id="toggle" defaultValue={"true"} />
+      <label htmlFor="run-start">Start RunMath on Windows Start</label>
+      <input type="checkbox" id="run-start" defaultValue={"true"} />
 
+      <br />
       {/* A color selector */}
       <label htmlFor="bg-color">Background Color</label>
       <input type="color" id="bg-color" defaultValue={"#000000"} />

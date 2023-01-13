@@ -1,6 +1,6 @@
 import { writeText } from "@tauri-apps/api/clipboard";
 import { useEffect } from "react";
-import { useCalculatorStore } from "../state/calculator";
+import { useCalculatorStore } from "@state/calculator";
 import styles from "./console.module.css";
 
 export const ConsoleResult = () => {

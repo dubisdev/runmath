@@ -1,5 +1,5 @@
 import { create } from "zustand";
-import { calculateResult } from "../utils/runinput";
+import { calculateResult } from "@utils/runinput";
 
 interface BasicCalculatorState {
   input: string;
