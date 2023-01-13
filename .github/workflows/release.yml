@@ -20,9 +20,6 @@ jobs:
         with:
           node-version: 18
 
-      - name: install dependencies
-        run: yarn
-
       - name: Semantic Release
         id: semantic
         uses: cycjimmy/semantic-release-action@v3
@@ -47,8 +44,8 @@ jobs:
       - name: install Rust stable
         uses: dtolnay/rust-toolchain@stable
  
-      - name: install app dependencies and build it
-        run: yarn && yarn build
+      - name: Install app dependencies
+        run: yarn
       
       - name: bump package version
         run: npm pkg set version="${{ needs.semantic-release.outputs.release_version }}"
@@ -58,10 +55,12 @@ jobs:
         uses: actions/github-script@v6
         with:
           script: |
-            github.rest.repos.getLatestRelease({ 
+            const { data } = await github.rest.repos.getLatestRelease({ 
               owner: context.repo.owner,
               repo: context.repo.repo
-            }).then(res => res.data.id)
+            })
+
+            return data.id
 
       - uses: tauri-apps/tauri-action@v0
         id: tauri_action
@@ -69,21 +68,21 @@ jobs:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         with:
           releaseId: ${{ steps.latest_release_id.outputs.result }}
-        
-      - name: Upload files to release
-        uses: actions/github-script@v6
-        env:
-          paths: ${{ steps.tauri_action.outputs.artifactPaths }}
-          release_id: ${{ steps.latest_release_id.outputs.result }}
-        with:
-          script: |
-            const PATHS = JSON.parse(process.env.paths)
 
-            PATHS.map(async (path) => {
-              await github.rest.repos.uploadReleaseAsset({
-                owner: context.repo.owner,
-                repo: context.repo.repo,
-                release_id: process.env.release_id,
-                name: path.split('\\').pop(),
-                data: require('fs').readFileSync(path)
-            })
+      # - name: Upload files to release
+      #   uses: actions/github-script@v6
+      #   env:
+      #     paths: ${{ steps.tauri_action.outputs.artifactPaths }}
+      #     release_id: ${{ steps.latest_release_id.outputs.result }}
+      #   with:
+      #     script: |
+      #       const PATHS = JSON.parse(process.env.paths)
+
+      #       PATHS.map(async (path) => {
+      #         await github.rest.repos.uploadReleaseAsset({
+      #           owner: context.repo.owner,
+      #           repo: context.repo.repo,
+      #           release_id: process.env.release_id,
+      #           name: path.split('\\').pop(),
+      #           data: require('fs').readFileSync(path)
+      #       })
