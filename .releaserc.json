@@ -11,7 +11,5 @@
             }
         ],
         "@semantic-release/release-notes-generator"
-    ],
-    "dryRun": false,
-    "ci": false
+    ]
 }
