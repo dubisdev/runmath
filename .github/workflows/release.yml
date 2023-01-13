@@ -8,6 +8,9 @@ jobs:
   semantic-release:
     runs-on: windows-latest
 
+    outputs:
+      releaseinfo: ${{ steps.semantic.outputs }}
+
     steps:
       - uses: actions/checkout@v3
 
@@ -27,16 +30,27 @@ jobs:
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
 
-      - name: Update packages to release
-        if: steps.semantic.outputs.new_release_published == 'true'
-        # exit with code 1 so the job stops
-        run: exit 1
+  build-executable:
+    runs-on: windows-latest
+    needs: semantic-release
+    if: needs.semantic-release.outputs.releaseinfo.new_release_published == 'true'
+
+    steps:
+      - uses: actions/checkout@v3
+
+      - name: setup node
+        uses: actions/setup-node@v3
+        with:
+          node-version: 18
 
       - name: install Rust stable
         uses: dtolnay/rust-toolchain@stable
  
       - name: install app dependencies and build it
         run: yarn && yarn build
+      
+      - name: bump package version
+        run: npm pkg set "version"="${{ needs.semantic-release.outputs.releaseinfo.new_release_version }}"
 
       - uses: tauri-apps/tauri-action@v0
         env:
