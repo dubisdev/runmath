@@ -29,6 +29,8 @@ jobs:
 
       - name: Update packages to release
         if: steps.semantic.outputs.new_release_published == 'true'
+        # exit with code 1 so the job stops
+        run: exit 1
 
       - name: install Rust stable
         uses: dtolnay/rust-toolchain@stable
