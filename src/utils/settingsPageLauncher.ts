@@ -3,6 +3,10 @@ import { TauriEvent } from "@tauri-apps/api/event";
 
 export const createSettingsPage = () => {
   const webview = new WebviewWindow("settings-page", {
+    minWidth: 400,
+    minHeight: 500,
+    maxWidth: 800,
+    maxHeight: 800,
     title: "RunMath Settings",
     visible: false,
     url: "settings.html",

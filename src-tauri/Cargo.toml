@@ -1,11 +1,11 @@
 [package]
-name = "app"
-version = "0.1.0"
-description = "A Tauri App"
-authors = ["you"]
-license = ""
+name = "runmath"
+version = "1.0.0"
+description = "Do math, quickly 🚀"
+authors = ["David Jiménez"]
+license = "MIT"
 repository = ""
-default-run = "app"
+default-run = "runmath"
 edition = "2021"
 rust-version = "1.57"
 
@@ -17,8 +17,9 @@ tauri-build = { version = "1.2.1", features = [] }
 [dependencies]
 serde_json = "1.0"
 serde = { version = "1.0", features = ["derive"] }
-tauri = { version = "1.2.1", features = ["clipboard-write-text", "global-shortcut-all", "process-exit", "window-create", "window-hide", "window-set-focus", "window-show", "window-start-dragging", "window-unminimize"] }
+tauri = { version = "1.2.1", features = ["clipboard-write-text", "fs-create-dir", "fs-read-dir", "fs-read-file", "fs-write-file", "global-shortcut-all", "path-all", "process-exit", "window-close", "window-create", "window-hide", "window-set-focus", "window-show", "window-start-dragging", "window-unminimize"] }
 tauri-plugin-window-state = "0.1"
+tauri-plugin-fs-watch = { git = "https://github.com/tauri-apps/plugins-workspace", branch = "dev" }
 
 [features]
 # by default Tauri runs in production mode

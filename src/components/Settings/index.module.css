@@ -1,0 +1,78 @@
+.settingsContainer {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
+    width: 100%;
+    gap: 1em;
+}
+
+.settingItem {
+    padding: 0.5em;
+    border: 1px solid white;
+    width: 100%;
+    display: inline-flex;
+    gap: 0.5em;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.settingTextZone {
+    width: 80%;
+    align-self: flex-start;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    gap: 0.25em;
+}
+
+.settingTitle {
+    font-size: large;
+    font-weight: bold;
+}
+
+.settingDescription {
+    font-size: small;
+    font-weight: normal;
+}
+
+.settingValue {
+    margin: 0 auto;
+    font-size: 1em;
+    font-weight: bold;
+}
+
+.buttonarea {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    width: 60%;
+    gap: 1em;
+}
+
+.save {
+    margin: 0 auto;
+    font-size: 1em;
+    font-weight: bold;
+    color: white;
+    background-color: #1f6dbb;
+    border: 1px solid #ffffff;
+    border-radius: 0.25em;
+    padding: 0.5em;
+    cursor: pointer;
+}
+
+.reset {
+    margin: 0 auto;
+    font-size: 1em;
+    font-weight: bold;
+    color: white;
+    background-color: #1f6dbb;
+    border: 1px solid #ffffff;
+    border-radius: 0.25em;
+    padding: 0.5em;
+    cursor: pointer;
+}

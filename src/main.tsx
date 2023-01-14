@@ -14,3 +14,5 @@ import("@utils/configureExitOnCloseWindow");
 import("@utils/configureShortcuts").then((module) =>
   module.configureShortcuts()
 );
+import("@utils/configureSettingsStorage");
+import("@utils/configureSettingsListener");
