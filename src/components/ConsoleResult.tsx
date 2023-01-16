@@ -20,7 +20,7 @@ export const ConsoleResult = () => {
     };
   }, [result]);
 
-  if (resultType !== "number") return null;
+  if (!["number", "string"].includes(String(resultType))) return null;
 
   const value = " ".repeat(input.length) + " = " + result;
 
