@@ -3,6 +3,7 @@ import ReactDOM from "react-dom/client";
 import { App } from "./App";
 
 import "./index.css";
+import "@utils/getInitialPreferences";
 
 ReactDOM.createRoot(document.getElementById("root")!).render(
   <React.StrictMode>
@@ -14,5 +15,3 @@ import("@utils/configureExitOnCloseWindow");
 import("@utils/configureShortcuts").then((module) =>
   module.configureShortcuts()
 );
-import("@utils/configureSettingsStorage");
-import("@utils/configureSettingsListener");

@@ -1,6 +1,7 @@
 // import { Checkbox } from "./Checkbox";
 import styles from "./index.module.css";
-import { settings, resetSettings } from "@utils/configureSettingsStorage";
+import { settings, resetSettings } from "@utils/settingsStorage";
+import { BGColor } from "./BGColor";
 
 const SETTINGS = [
   // {
@@ -20,16 +21,7 @@ const SETTINGS = [
   {
     name: "Background Color",
     description: "Change the background color of the app",
-    SettingElement: () => (
-      <input
-        type="color"
-        defaultValue={settings.getCache("background")}
-        onChange={(event) =>
-          settings.setCache("background", event.target.value)
-        }
-        className={styles.settingValue}
-      />
-    ),
+    SettingElement: BGColor,
   },
 ] as const;
 

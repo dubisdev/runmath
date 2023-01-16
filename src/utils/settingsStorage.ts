@@ -1,5 +1,5 @@
 import { SettingsManager } from "tauri-settings";
-import { watch } from "tauri-plugin-fs-watch-api";
+import debounce from "just-debounce";
 
 type Schema = {
   /**
@@ -17,18 +17,28 @@ const settingsManager = new SettingsManager<Schema>(
   { prettify: true }
 );
 
-// checks whether the settings file exists and created it if not
-// loads the settings if it exists
+// creates or loads the settings file
 await settingsManager.initialize();
 
 export const resetSettings = async () => {
   settingsManager.settings = settingsManager.default;
-  await settings.syncCache();
+  await settingsManager.syncCache();
 };
 
-// watch the settings file for changes
-watch(settingsManager.path, {}, () => {
-  window.dispatchEvent(new CustomEvent("settings-changed"));
+const debouncedSave = debounce(async (key: keyof Schema, value: any) => {
+  await settingsManager.set(key, value);
+  console.info(`Saved ${key} with value ${value} to settings`);
+}, 1000);
+
+window.addEventListener("storage", (e) => {
+  switch (e.key) {
+    case "background":
+      document.body.style.setProperty("--bg-color", e.newValue);
+      debouncedSave("background", e.newValue);
+      break;
+    default:
+      break;
+  }
 });
 
 export const settings = settingsManager;
