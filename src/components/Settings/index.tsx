@@ -1,23 +1,15 @@
-// import { Checkbox } from "./Checkbox";
 import styles from "./index.module.css";
 import { settings, resetSettings } from "@utils/settingsStorage";
 import { BGColor } from "./BGColor";
+import { RunOnStart } from "./RunOnStart";
 
 const SETTINGS = [
-  // {
-  //   name: "Start RunMath on Windows Start",
-  //   description:
-  //     "RunMath will start automatically when you turn on your computer",
-  //   SettingElement: () => (
-  //     <Checkbox
-  //       checked={settings.getCache("runOnWindowsStart")}
-  //       onChange={(newValue) =>
-  //         settings.setCache("runOnWindowsStart", newValue)
-  //       }
-  //       className={styles.settingValue}
-  //     />
-  //   ),
-  // },
+  {
+    name: "Start RunMath on Windows Start",
+    description:
+      "RunMath will start automatically when you turn on your computer",
+    SettingElement: RunOnStart,
+  },
   {
     name: "Background Color",
     description: "Change the background color of the app",

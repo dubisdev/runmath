@@ -1,16 +1,16 @@
 import { settings } from "@utils/settingsStorage";
 import styles from "./index.module.css";
 import * as ls from "@utils/localStorage";
+import { Checkbox } from "./Checkbox";
 
-export const BGColor = () => {
-  const handleChange = (event: React.ChangeEvent<HTMLInputElement>) => {
-    ls.set("background", event.target.value);
+export const RunOnStart = () => {
+  const handleChange = (newValue: boolean) => {
+    ls.set("runOnWindowsStart", newValue);
   };
 
   return (
-    <input
-      type="color"
-      defaultValue={settings.getCache("background")}
+    <Checkbox
+      checked={settings.getCache("runOnWindowsStart")}
       onChange={handleChange}
       className={styles.settingValue}
     />

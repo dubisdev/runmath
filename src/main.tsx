@@ -15,3 +15,6 @@ import("@utils/configureExitOnCloseWindow");
 import("@utils/configureShortcuts").then((module) =>
   module.configureShortcuts()
 );
+import("@utils/settingsStorage").then((module) =>
+  module.startWatchingStorageEvents()
+);
