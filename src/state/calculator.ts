@@ -6,8 +6,8 @@ interface BasicCalculatorState {
   setInput: (input: string) => void;
   resetInput: () => void;
 
-  result: number | null;
-  resultType: "number" | "error" | null;
+  result: number | string | null;
+  resultType: "number" | "error" | "string" | null;
   setResult: (result: number | null) => void;
 }
 
