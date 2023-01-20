@@ -19,12 +19,12 @@
     "tauri-plugin-autostart-api": "https://github.com/tauri-apps/tauri-plugin-autostart",
     "tauri-settings": "0.3.0",
     "the-new-css-reset": "1.8.2",
-    "zustand": "4.3.1"
+    "zustand": "4.3.2"
   },
   "devDependencies": {
-    "@tauri-apps/cli": "1.2.2",
+    "@tauri-apps/cli": "1.2.3",
     "@types/node": "18.11.18",
-    "@types/react": "18.0.26",
+    "@types/react": "18.0.27",
     "@types/react-dom": "18.0.10",
     "@vitejs/plugin-react": "3.0.1",
     "semantic-release": "^19.0.5",
