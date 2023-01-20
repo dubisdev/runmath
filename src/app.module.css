@@ -12,6 +12,9 @@
     display: block;
     width: 95%;
     margin: 0 auto;
-    height: 42px;
     font-size: xx-large;
+}
+
+.inputBoxLayout>input {
+    height: 42px;
 }

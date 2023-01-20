@@ -80,7 +80,7 @@
       {
         "label": "main",
         "fullscreen": false,
-        "height": 80,
+        "height": 100,
         "resizable": false,
         "width": 700,
         "center": true,

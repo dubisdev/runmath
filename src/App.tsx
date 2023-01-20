@@ -6,8 +6,8 @@ export function App() {
   return (
     <div data-tauri-drag-region className={styles.appContainer}>
       <div className={styles.inputBoxLayout}>
-        <ConsoleResult />
         <ConsoleInput />
+        <ConsoleResult />
       </div>
     </div>
   );

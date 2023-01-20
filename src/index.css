@@ -1,6 +1,7 @@
 @import "the-new-css-reset";
 
 body {
+  height: 100vh;
   overflow: hidden;
   margin: 0;
   padding: 0 2px;

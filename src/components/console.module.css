@@ -25,5 +25,14 @@
     width: 100%;
     z-index: 0;
     color: rgba(39, 39, 39, 0.525);
+    top: 0;
+    left: 0;
+}
 
+.subconsoleResult {
+    height: 100%;
+    font-size: xx-large;
+    width: 100%;
+    color: rgba(39, 39, 39, 0.525);
+    background: inherit;
 }
