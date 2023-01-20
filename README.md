@@ -36,7 +36,6 @@
   - Font
   - Comma or decimal point
   - Variables?
-- Manage too big numbers on the screen
 - Print functions
 
 ## License
