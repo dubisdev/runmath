@@ -18,3 +18,6 @@ import("@utils/configureShortcuts").then((module) =>
 import("@utils/settingsStorage").then((module) =>
   module.startWatchingStorageEvents()
 );
+import("@utils/singleInstance").then((module) =>
+  module.configureSingleInstance()
+);
