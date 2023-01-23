@@ -40,4 +40,4 @@
 
 ## License
 
-I don't know yet.
+MIT © David Jimenez
