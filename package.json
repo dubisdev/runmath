@@ -16,6 +16,7 @@
     "mathjs": "11.5.0",
     "react": "18.2.0",
     "react-dom": "18.2.0",
+    "react-textra": "0.1.3",
     "tauri-plugin-autostart-api": "https://github.com/tauri-apps/tauri-plugin-autostart",
     "tauri-settings": "0.3.0",
     "the-new-css-reset": "1.8.3",

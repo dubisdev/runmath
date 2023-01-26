@@ -1,3 +1,11 @@
+.placeholder {
+    height: 100%;
+    line-height: 42px;
+    color: cornflowerblue;
+    user-select: none;
+    position: absolute;
+}
+
 .consoleInput {
     height: 100%;
     font-size: xx-large;
@@ -12,10 +20,6 @@
 
 .consoleInput:focus-visible {
     caret-color: black;
-}
-
-.consoleInput::placeholder {
-    color: cornflowerblue;
 }
 
 .consoleResult {
