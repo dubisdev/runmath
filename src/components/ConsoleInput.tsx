@@ -4,7 +4,14 @@ import styles from "./console.module.css";
 
 const dateAsSum = new Date().toLocaleDateString().split("/").join("+");
 
-const placeHolderContents = [dateAsSum, "alt + q", "alt + s"];
+const placeHolderContents = [
+  dateAsSum,
+  "alt + q = quit runmath",
+  "alt + s = show settings",
+  "alt + m = toggle visibility",
+  "enter = copy to clipboard",
+  "tab = select all",
+];
 
 export const ConsoleInput = () => {
   const [input, setInput] = useCalculatorStore((s) => [s.input, s.setInput]);
@@ -14,6 +21,7 @@ export const ConsoleInput = () => {
       {!input && (
         <Textra
           data={placeHolderContents}
+          stopDuration={7000}
           effect="scale"
           className={styles.placeholder}
         />
