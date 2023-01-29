@@ -6,8 +6,8 @@ const dateAsSum = new Date().toLocaleDateString().split("/").join("+");
 
 const placeHolderContents = [
   dateAsSum,
-  "alt + q = quit runmath",
-  "alt + s = show settings",
+  "alt + q = quit",
+  "alt + s = settings",
   "alt + m = toggle visibility",
   "enter = copy to clipboard",
   "tab = select all",
