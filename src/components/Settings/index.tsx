@@ -1,5 +1,5 @@
 import styles from "./index.module.css";
-import { settings, resetSettings } from "@utils/settingsStorage";
+import { resetSettings } from "@utils/settingsStorage";
 import { BGColor } from "./BGColor";
 import { RunOnStart } from "./RunOnStart";
 
@@ -23,8 +23,7 @@ export const Settings = () => {
     window.location.reload();
   };
 
-  const handleSaveSettings = async () => {
-    await settings.syncCache();
+  const handleExitSettings = async () => {
     import("@tauri-apps/api/window").then((module) =>
       module.getCurrent().close()
     );
@@ -46,8 +45,8 @@ export const Settings = () => {
       ))}
 
       <section className={styles.buttonarea}>
-        <button className={styles.save} onClick={handleSaveSettings}>
-          Save Settings
+        <button className={styles.save} onClick={handleExitSettings}>
+          Exit Settings
         </button>
         <button className={styles.reset} onClick={handleResetSettings}>
           Reset Settings

@@ -78,6 +78,7 @@
     },
     "windows": [
       {
+        "alwaysOnTop": true,
         "label": "main",
         "fullscreen": false,
         "height": 100,
