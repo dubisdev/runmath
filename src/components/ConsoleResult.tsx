@@ -1,7 +1,6 @@
-import { writeText } from "@tauri-apps/api/clipboard";
-import { useEffect } from "react";
 import { useCalculatorStore } from "@state/calculator";
 import styles from "./console.module.css";
+import { useCopyToClipboardSubscription } from "../hooks/useCopyToClipboardSubscription";
 
 const shouldDisplayInSubconsole = (input: string, result: string) => {
   return input.length + 3 + result.length > 34;
@@ -15,18 +14,7 @@ export const ConsoleResult = () => {
   const input = useCalculatorStore((s) => s.input);
   const result = useCalculatorStore((s) => s.result);
   const resultType = useCalculatorStore((s) => s.resultType);
-
-  useEffect(() => {
-    function copyToClipboard() {
-      if (result) writeText(String(result));
-    }
-
-    window.addEventListener("copy-to-clipboard", copyToClipboard);
-
-    return () => {
-      window.removeEventListener("copy-to-clipboard", copyToClipboard);
-    };
-  }, [result]);
+  useCopyToClipboardSubscription(result);
 
   if (!["number", "string"].includes(String(resultType))) return null;
 
