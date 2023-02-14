@@ -14,11 +14,14 @@
 
 ## Available Shortcuts
 
-- `Alt+M` to toggle the visibility of the app
+- Use `up` and `down` arrows to navigate through the history
+- `Alt+M` to toggle the visibility of the app (M stands for math 👀)
 - `Alt+Q` to quit the app
 - `Alt+S` to open the settings
-- `Enter` to copy the result to the clipboard
-- `tab` to focus the input
+- `Enter` to copy the result to the clipboard and update the history
+- `=` saves the result to the history
+- `tab` to select the input
+- `esc` to clear the input
 
 ## Available settings
 
@@ -29,7 +32,6 @@
 
 <!-- TODO - Move this to github projects -->
 
-- Operations history using up and down arrows <!--  (saving the input, not the result) -->
 - Settings
   - Colors
   - Font size
