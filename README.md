@@ -42,4 +42,4 @@
 
 ## License
 
-MIT © David Jimenez
+[MIT](./LICENSE.md) © David Jimenez
