@@ -1,4 +1,4 @@
-import { evaluate, typeOf } from "mathjs";
+import { typeOf, format, evaluate } from "mathjs";
 
 export const calculateResult = (expression: string) => {
   try {
@@ -6,7 +6,7 @@ export const calculateResult = (expression: string) => {
 
     const res = evaluate(expression);
 
-    if (typeOf(res) === "number") return [res, "number"] as const;
+    if (typeOf(res) === "number") return [Number(format(res, {precision: 14})), "number"] as const;
     if (typeOf(res) === "Complex") return [res, "string"] as const;
     if (typeOf(res) === "Unit") return [res, "string"] as const;
 
