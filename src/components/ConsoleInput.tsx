@@ -18,6 +18,10 @@ export const ConsoleInput = () => {
         setInput(newInput);
       }
     }
+    // TODO - Add setting to disable this
+    if (e.key === "Enter") {
+      setInput("");
+    }
   };
 
   return (
