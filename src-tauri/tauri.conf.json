@@ -7,7 +7,7 @@
     "distDir": "../dist"
   },
   "package": {
-    "productName": "runmath",
+    "productName": "RunMath",
     "version": "../package.json"
   },
   "tauri": {
@@ -71,7 +71,7 @@
       }
     },
     "security": {
-      "csp": "default-src 'self'"
+      "csp": null
     },
     "updater": {
       "active": false
