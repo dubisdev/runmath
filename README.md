@@ -1,8 +1,11 @@
-<img src="./src-tauri/icons/128x128.png" width="100%" height="110px" style="object-fit: contain" align="center" />
+<p align="center"><img src="./src-tauri/icons/128x128.png" height="110px"/></p>
 
-<h1 align="center" style="margin-bottom: 0px;">RunMath</h1>
-<h2 align="center" style="font-size:medium; margin: 0">A keyboard-first calculator for Windows - Do math, <i>quickly 🚀</i></h2>
-<a align="center" style="display:block; margin-top: 0px;" href="https://github.com/dubisdev/runmath/releases/latest">🔗 Go to Download Page</a>
+<h1 align="center" style="margin: 0; display: none">RunMath</h1>
+
+<p align="center">A keyboard-first calculator for Windows - Do math, <i>quickly 🚀</i></p>
+<p align="center">
+  <a href="https://github.com/dubisdev/runmath/releases/latest" style="margin: 0px;">🔗 Go to Download Page</a>
+</p>
 
 ## 🧮 Features
 
