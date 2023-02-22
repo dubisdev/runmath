@@ -2,6 +2,7 @@
   "name": "runmath",
   "private": true,
   "version": "0.0.0-development",
+  "license": "MIT",
   "scripts": {
     "dev": "vite",
     "build": "tsc && vite build",
