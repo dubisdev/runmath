@@ -4,8 +4,13 @@
 
 <p align="center">A keyboard-first calculator for Windows - Do math, <i>quickly 🚀</i></p>
 <p align="center">
-  <a href="https://github.com/dubisdev/runmath/releases/latest" style="margin: 0px;">🔗 Go to Download Page</a>
+  <a href="https://github.com/dubisdev/runmath/releases/latest" style="margin: 0px;">
+    🔗 Go to Download Page 
+  </a>
+    &nbsp; | &nbsp; Give it a <a href="https://github.com/dubisdev/runmath">Star ⭐</a>
 </p>
+
+<hr />
 
 ## 🧮 Features
 
@@ -16,7 +21,7 @@
 <p align="center">
 <img src="https://user-images.githubusercontent.com/77246331/215351669-5f3201be-07ea-4a4a-b08a-0104f3c59820.gif" align="center" />
 
-## Shortcuts
+## 🚄 Shortcuts
 
 RunMath comes with a few shortcuts to make your life easier:
 
@@ -29,14 +34,14 @@ RunMath comes with a few shortcuts to make your life easier:
 - `tab` to select the input
 - `esc` to clear the input
 
-## Settings
+## ⚙️ Settings
 
 Configure the app to your liking! For now, you can change:
 
 - Background color
 - Run app on startup or not
 
-## Roadmap
+## 🔜 Roadmap
 
 <!-- TODO - Move this to github projects -->
 
@@ -48,6 +53,6 @@ Configure the app to your liking! For now, you can change:
   - [ ] Variables?
 - [ ] Print functions
 
-## License
+## ⚖️ License
 
 [MIT](./LICENSE.md) © [David Jimenez](https://dubis.dev)
