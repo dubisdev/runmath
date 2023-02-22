@@ -24,6 +24,11 @@ export const Checkbox = (props: CheckboxProps) => {
 
   return (
     <input
+      style={{
+        accentColor: "white",
+        width: "30%",
+        height: "1.25rem",
+      }}
       type="checkbox"
       checked={isChecked}
       onChange={(e) => onChange(e.target.checked)}
