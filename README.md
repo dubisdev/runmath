@@ -1,13 +1,16 @@
-<p align="center"><img src="./src-tauri/icons/128x128.png" height="110px"/></p>
+<p align="center">
+<img src="./src-tauri/icons/128x128.png"/></p>
 
 <h1 align="center" style="margin: 0; display: none">RunMath</h1>
 
 <p align="center">A keyboard-first calculator for Windows - Do math, <i>quickly 🚀</i></p>
+
 <p align="center">
-  <a href="https://github.com/dubisdev/runmath/releases/latest" style="margin: 0px;">
-    🔗 Go to Download Page 
+  <a href="https://github.com/dubisdev/runmath/releases/latest">
+    🔗 Go to Download Page
   </a>
-    &nbsp; | &nbsp; Give it a <a href="https://github.com/dubisdev/runmath">Star ⭐</a>
+    &nbsp; | &nbsp; Give it a
+    <a href="https://github.com/dubisdev/runmath">Star ⭐</a>
 </p>
 
 <hr />
@@ -19,7 +22,7 @@
 - `Unit conversion` (ex: 1m to cm = 100)
 
 <p align="center">
-<img src="https://user-images.githubusercontent.com/77246331/215351669-5f3201be-07ea-4a4a-b08a-0104f3c59820.gif" align="center" />
+<img src="./assets/readme-animation.gif"/>
 
 ## 🚄 Shortcuts
 
