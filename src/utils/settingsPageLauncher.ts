@@ -4,10 +4,9 @@ const SETTINGS_PAGE_LABEL = "settings-page";
 
 export const createSettingsPage = () => {
   const webview = new WebviewWindow(SETTINGS_PAGE_LABEL, {
-    minWidth: 400,
-    minHeight: 500,
-    maxWidth: 800,
-    maxHeight: 800,
+    width: 700,
+    height: 400,
+    resizable: false,
     title: "RunMath Settings",
     visible: false,
     url: "settings.html",

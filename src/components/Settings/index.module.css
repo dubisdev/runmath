@@ -11,22 +11,21 @@
 }
 
 .settingItem {
-    background-color: #1f6dbb;
-    border-radius: 10px;
+    background-color: #292e33;
+    border-radius: 2px;
     width: 100%;
     display: inline-flex;
-    justify-content: space-evenly;
+    justify-content: space-between;
     align-items: center;
-    box-shadow: 0 0 10px 0 rgba(255, 255, 255, 0.206);
+    box-shadow: 0 0 5px 0 rgba(16, 15, 15, 0.206);
 }
 
 .settingTextZone {
-    width: 85%;
     padding: 1em;
     display: flex;
     flex-direction: column;
     justify-content: center;
-    gap: 1em;
+    gap: .2em;
 }
 
 .settingTitle {
@@ -40,7 +39,7 @@
 }
 
 .settingValue {
-    margin: 0 auto;
+    padding: 0 1.5em;
     font-size: 1em;
     font-weight: bold;
 }
@@ -59,11 +58,6 @@
     font-size: 1em;
     font-weight: bold;
     color: white;
-    background-color: #1f6dbb;
-    border: 1px solid #2d2b2b;
-    border-radius: 0.25em;
-    padding: 0.5em;
-    cursor: pointer;
 }
 
 .reset {
@@ -71,18 +65,21 @@
     font-size: 1em;
     font-weight: bold;
     color: white;
-    background-color: #1f6dbb;
-    border: 1px solid #2d2b2b;
-    border-radius: 0.25em;
-    padding: 0.5em;
+}
+
+button {
+    background-color: #39434c;
+    border: 1px solid #46525d;
+    border-radius: 2px;
+    padding: .5em 1em;
     cursor: pointer;
 }
 
 button:hover {
-    background-color: #0f69ca;
+    background-color: #495662;
 }
 
 button:focus {
-    background-color: #2689f3;
-    outline-color: cornflowerblue;
+    background-color: #495662;
+    outline-color: rgb(36, 37, 39);
 }

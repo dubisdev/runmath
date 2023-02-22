@@ -1,5 +1,7 @@
 import { useState } from "react";
 
+import ReactSwitch from "react-switch";
+
 type CheckboxProps = {
   checked: boolean;
   onChange: (newValue: boolean) => any;
@@ -23,18 +25,14 @@ export const Checkbox = (props: CheckboxProps) => {
   };
 
   return (
-    <input
-      style={{
-        accentColor: "white",
-        width: "30%",
-        height: "1.25rem",
-      }}
-      type="checkbox"
-      checked={isChecked}
-      onChange={(e) => onChange(e.target.checked)}
+    <ReactSwitch
       className={className}
+      checked={isChecked}
+      onChange={toggleChecked}
       onKeyDown={handleKeyDown}
-      onInput={toggleChecked}
+      onColor="#495662"
+      uncheckedIcon={false}
+      checkedIcon={false}
     />
   );
 };
