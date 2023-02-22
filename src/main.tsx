@@ -21,3 +21,4 @@ import("@utils/settingsStorage").then((module) =>
 import("@utils/singleInstance").then((module) =>
   module.configureSingleInstance()
 );
+import("@utils/updateNotifier").then((module) => module.checkForUpdates());

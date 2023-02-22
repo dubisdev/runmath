@@ -42,6 +42,9 @@
       },
       "path": {
         "all": true
+      },
+      "notification": {
+        "all": true
       }
     },
     "bundle": {
