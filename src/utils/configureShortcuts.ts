@@ -20,7 +20,6 @@ export const configureShortcuts = () => {
     }
 
     if (isSettingsCommand(e)) {
-      // TODO - Finish settings page so this can be enabled
       createSettingsPage();
     }
   });

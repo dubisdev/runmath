@@ -4,12 +4,13 @@ const SETTINGS_PAGE_LABEL = "settings-page";
 
 export const createSettingsPage = () => {
   const webview = new WebviewWindow(SETTINGS_PAGE_LABEL, {
-    width: 700,
+    alwaysOnTop: true,
     height: 400,
     resizable: false,
     title: "RunMath Settings",
-    visible: false,
     url: "settings.html",
+    visible: false,
+    width: 700,
   });
 
   webview.once("tauri://created", () => {

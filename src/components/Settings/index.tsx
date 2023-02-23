@@ -31,7 +31,7 @@ export const Settings = () => {
 
   return (
     <div className={styles.settingsContainer}>
-      <h1>Settings</h1>
+      <h1>⚙️ RunMath Settings</h1>
 
       {SETTINGS.map(({ SettingElement, description, name }) => (
         <label className={styles.settingItem} key={name}>
