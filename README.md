@@ -1,7 +1,10 @@
 <p align="center">
-<img src="./src-tauri/icons/128x128.png"/></p>
+  <a href="https://github.com/dubisdev/runmath">
+    <img src="./src-tauri/icons/128x128.png"/>
+  </a>
+</p>
 
-<h1 align="center" style="margin: 0; display: none">RunMath</h1>
+<h1 align="center">RunMath</h1>
 
 <p align="center">A keyboard-first calculator for Windows - Do math, <i>quickly 🚀</i></p>
 
@@ -9,8 +12,8 @@
   <a href="https://github.com/dubisdev/runmath/releases/latest">
     🔗 Go to Download Page
   </a>
-    &nbsp; | &nbsp; Give it a
-    <a href="https://github.com/dubisdev/runmath">Star ⭐</a>
+    &nbsp; | &nbsp; Give it a Star ⭐ | &nbsp;
+    <a href="https://www.buymeacoffee.com/dubisdev">Support the project 🤝</a>
 </p>
 
 <hr />
@@ -46,13 +49,10 @@ Configure the app to your liking! For now, you can change:
 
 ## 🔜 Roadmap
 
-<!-- TODO - Move this to github projects -->
-
 - [ ] Settings
   - [ ] Colors
   - [ ] Font size
   - [ ] Font
-  - [ ] Comma or decimal point
   - [ ] Variables?
 - [ ] Print functions
 
