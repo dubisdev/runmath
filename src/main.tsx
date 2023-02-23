@@ -11,7 +11,9 @@ ReactDOM.createRoot(document.getElementById("root")!).render(
   </React.StrictMode>
 );
 
-import("@utils/configureExitOnCloseWindow");
+import("@utils/exitOnCloseMainWindow").then((module) =>
+  module.configureExitOnClose()
+);
 import("@utils/configureShortcuts").then((module) =>
   module.configureShortcuts()
 );
