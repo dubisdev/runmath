@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useEffect, useState } from "react";
 
 import ReactSwitch from "react-switch";
 
@@ -13,14 +13,17 @@ export const Checkbox = (props: CheckboxProps) => {
 
   const [isChecked, setIsChecked] = useState(() => checked);
 
-  const toggleChecked = () => {
-    setIsChecked((prev) => !prev);
+  useEffect(() => {
+    onChange(isChecked);
+  }, [isChecked]);
+
+  const handleChange = (newValue: boolean) => {
+    setIsChecked(newValue);
   };
 
   const handleKeyDown = (event: React.KeyboardEvent<HTMLInputElement>) => {
     if (event.key === "Enter") {
-      toggleChecked();
-      onChange(!isChecked);
+      setIsChecked((prev) => !prev);
     }
   };
 
@@ -28,7 +31,7 @@ export const Checkbox = (props: CheckboxProps) => {
     <ReactSwitch
       className={className}
       checked={isChecked}
-      onChange={toggleChecked}
+      onChange={handleChange}
       onKeyDown={handleKeyDown}
       onColor="#495662"
       uncheckedIcon={false}
