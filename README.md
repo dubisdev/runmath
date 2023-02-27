@@ -24,7 +24,7 @@
 
 ## 🧮 Features
 
-- `Basic math operations`: addition, subtraction, multiplication, division, exponentiation, square root, factorial, modulo...
+- `Basic math operations`: `+`, `-`, `x`, `/`, `%`, `^`, `√`, `!`,...
 - `Complex numbers` (ex: 2i * 8i = -16)
 - `Unit conversion` (ex: 1m to cm = 100)
 
