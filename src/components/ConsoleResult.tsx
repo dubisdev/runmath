@@ -14,7 +14,7 @@ export const ConsoleResult = () => {
   const input = useCalculatorStore((s) => s.input);
   const result = useCalculatorStore((s) => s.result);
   const resultType = useCalculatorStore((s) => s.resultType);
-  useCopyToClipboardSubscription(result);
+  useCopyToClipboardSubscription();
 
   if (!["number", "string"].includes(String(resultType))) return null;
 
