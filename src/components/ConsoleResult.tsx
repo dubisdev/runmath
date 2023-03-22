@@ -13,10 +13,9 @@ const calculateConsoleResult = (input: string, result: any) => {
 export const ConsoleResult = () => {
   const input = useCalculatorStore((s) => s.input);
   const result = useCalculatorStore((s) => s.result);
-  const resultType = useCalculatorStore((s) => s.resultType);
   useCopyToClipboardSubscription();
 
-  if (!["number", "string"].includes(String(resultType))) return null;
+  if (!result) return null;
 
   if (shouldDisplayInSubconsole(input, String(result))) {
     return (
