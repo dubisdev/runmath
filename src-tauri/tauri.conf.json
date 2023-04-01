@@ -53,6 +53,7 @@
     "bundle": {
       "active": true,
       "category": "Utility",
+      "publisher": "David Jiménez",
       "copyright": "David Jiménez Ⓒ 2023",
       "externalBin": [],
       "icon": [
@@ -67,20 +68,11 @@
       "resources": [],
       "shortDescription": "",
       "targets": [
-        "msi",
-        "updater"
-      ],
-      "windows": {
-        "certificateThumbprint": null,
-        "digestAlgorithm": "sha256",
-        "timestampUrl": ""
-      }
+        "msi"
+      ]
     },
     "security": {
-      "csp": null
-    },
-    "updater": {
-      "active": false
+      "csp": "default-src 'self'; style-src 'self' 'unsafe-inline';connect-src api.github.com"
     },
     "windows": [
       {
