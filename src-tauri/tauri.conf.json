@@ -11,6 +11,9 @@
     "version": "../package.json"
   },
   "tauri": {
+    "systemTray": {
+      "iconPath": "icons/app-icon.png"
+    },
     "allowlist": {
       "globalShortcut": {
         "all": true
@@ -81,8 +84,8 @@
     },
     "windows": [
       {
+        "title": "RunMath",
         "alwaysOnTop": true,
-        "label": "main",
         "fullscreen": false,
         "height": 100,
         "resizable": false,
