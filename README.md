@@ -39,6 +39,7 @@ RunMath comes with a few shortcuts to make your life easier:
 - `Alt+M` to toggle the visibility of the app (M stands for math 👀)
 - `Alt+Q` to quit the app
 - `Alt+S` opens the settings
+- `Alt+U` opens the download page in your browser
 - `Enter` copies the result to the clipboard and clears the input
 - `=` saves the result to the history
 - `tab` to select the input

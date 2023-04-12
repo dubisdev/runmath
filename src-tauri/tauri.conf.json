@@ -49,12 +49,15 @@
       },
       "notification": {
         "all": true
+      },
+      "shell": {
+        "open": true
       }
     },
     "bundle": {
       "active": true,
       "category": "Utility",
-      "publisher": "David Jiménez",
+      "publisher": "dubis.dev",
       "copyright": "David Jiménez Ⓒ 2023",
       "externalBin": [],
       "icon": [

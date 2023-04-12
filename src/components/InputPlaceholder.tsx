@@ -8,6 +8,7 @@ const placeHolderContents = [
   "alt + q = quit",
   "alt + s = settings",
   "alt + m = toggle visibility",
+  "alt + u = go to download page",
   "enter = copy to clipboard",
   "tab = select all",
 ];
