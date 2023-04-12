@@ -1,10 +1,7 @@
 import { useCalculatorStore } from "@state/calculator";
 import styles from "./console.module.css";
 import { useCopyToClipboardSubscription } from "../hooks/useCopyToClipboardSubscription";
-
-const shouldDisplayInSubconsole = (input: string, result: string) => {
-  return input.length + 3 + result.length > 34;
-};
+import { shouldDisplayInSubconsole, SubConsoleResult } from "./SubConsoleResult";
 
 const calculateConsoleResult = (input: string, result: any) => {
   return " ".repeat(input.length) + " = " + result;
@@ -18,13 +15,7 @@ export const ConsoleResult = () => {
   if (!result) return null;
 
   if (shouldDisplayInSubconsole(input, String(result))) {
-    return (
-      <input
-        className={styles.subconsoleResult}
-        disabled
-        value={String(result)}
-      />
-    );
+    return <SubConsoleResult value={String(result)} />
   }
 
   const value = calculateConsoleResult(input, result);

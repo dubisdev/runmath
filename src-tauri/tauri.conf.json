@@ -31,7 +31,8 @@
         "unminimize": true,
         "setFocus": true,
         "show": true,
-        "startDragging": true
+        "startDragging": true,
+        "setSize": true
       },
       "fs": {
         "createDir": true,
@@ -79,7 +80,7 @@
         "title": "RunMath",
         "alwaysOnTop": true,
         "fullscreen": false,
-        "height": 100,
+        "height": 44,
         "resizable": false,
         "width": 700,
         "center": true,
