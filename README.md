@@ -31,7 +31,7 @@
 <p align="center">
 <img src="./assets/readme-animation.gif"/>
 
-> **note** Feel free to open an issue if you have any suggestions or ideas for new features!
+> **Note**: Feel free to open an issue if you have any suggestions or ideas for new features!
 
 ## 🚄 Shortcuts
 
