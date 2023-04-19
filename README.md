@@ -31,6 +31,8 @@
 <p align="center">
 <img src="./assets/readme-animation.gif"/>
 
+> **note** Feel free to open an issue if you have any suggestions or ideas for new features!
+
 ## 🚄 Shortcuts
 
 RunMath comes with a few shortcuts to make your life easier:
@@ -51,15 +53,6 @@ Configure the app to your liking! For now, you can change:
 
 - Background color
 - Run app on startup or not
-
-## 🔜 Roadmap
-
-- [ ] Settings
-  - [ ] Colors
-  - [ ] Font size
-  - [ ] Font
-  - [ ] Variables?
-- [ ] Print functions
 
 ## ⚖️ License
 
