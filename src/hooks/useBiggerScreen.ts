@@ -6,7 +6,7 @@ export const useBiggerScreen = () => {
         appWindow.setSize(new LogicalSize(700, 88))
 
         return () => {
-            appWindow.setSize(new LogicalSize(700, 44))
+            appWindow.setSize(new LogicalSize(700, 46))
         }
     }, [])
 }

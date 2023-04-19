@@ -83,7 +83,7 @@
         "title": "RunMath",
         "alwaysOnTop": true,
         "fullscreen": false,
-        "height": 44,
+        "height": 46,
         "resizable": false,
         "width": 700,
         "center": true,
