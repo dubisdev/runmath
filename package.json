@@ -13,7 +13,7 @@
   },
   "dependencies": {
     "@dubisdev/pointer-stack-structure": "1.1.1",
-    "@tauri-apps/api": "1.2.0",
+    "@tauri-apps/api": "1.3.0",
     "just-debounce": "1.1.0",
     "mathjs": "11.8.0",
     "react": "18.2.0",
@@ -24,17 +24,17 @@
     "tauri-plugin-autostart-api": "https://github.com/tauri-apps/tauri-plugin-autostart",
     "tauri-settings": "0.3.1",
     "the-new-css-reset": "1.8.4",
-    "zustand": "4.3.7"
+    "zustand": "4.3.8"
   },
   "devDependencies": {
-    "@tauri-apps/cli": "1.2.3",
+    "@tauri-apps/cli": "1.3.0",
     "@types/node": "18.15.11",
-    "@types/react": "18.0.37",
-    "@types/react-dom": "18.0.11",
-    "@vitejs/plugin-react": "3.1.0",
-    "semantic-release": "21.0.1",
+    "@types/react": "18.2.5",
+    "@types/react-dom": "18.2.3",
+    "@vitejs/plugin-react": "4.0.0",
+    "semantic-release": "21.0.2",
     "typescript": "5.0.4",
-    "vite": "4.2.2"
+    "vite": "4.3.5"
   },
   "repository": "dubisdev/runmath"
 }
