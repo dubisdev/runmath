@@ -59,7 +59,6 @@
       "category": "Utility",
       "publisher": "dubis.dev",
       "copyright": "David Jiménez Ⓒ 2023",
-      "externalBin": [],
       "icon": [
         "icons/32x32.png",
         "icons/128x128.png",
@@ -69,8 +68,6 @@
       ],
       "identifier": "dev.dubis.runmath",
       "longDescription": "Do math, quickly 🚀",
-      "resources": [],
-      "shortDescription": "",
       "targets": [
         "msi"
       ]
