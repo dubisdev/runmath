@@ -69,7 +69,8 @@
       "identifier": "dev.dubis.runmath",
       "longDescription": "Do math, quickly 🚀",
       "targets": [
-        "msi"
+        "msi",
+        "updater"
       ]
     },
     "security": {
