@@ -29,7 +29,7 @@
 - `Unit conversion` (ex: 1m to cm = 100)
 
 <p align="center">
-<img src="./assets/readme-animation.gif"/>
+<img src="./assets/readme-animation.gif" width="734" />
 
 > **Note**: Feel free to open an issue if you have any suggestions or ideas for new features!
 
