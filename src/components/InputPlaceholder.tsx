@@ -1,7 +1,7 @@
 import Textra from "react-textra";
 import styles from "./console.module.css";
 
-const dateAsSum = new Date().toLocaleDateString().split("/").join("+");
+const dateAsSum = new Date().toLocaleDateString();
 
 const placeHolderContents = [
   dateAsSum,
