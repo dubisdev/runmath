@@ -15,26 +15,26 @@
     "@dubisdev/pointer-stack-structure": "1.1.1",
     "@tauri-apps/api": "1.4.0",
     "just-debounce": "1.1.0",
-    "mathjs": "11.8.2",
+    "mathjs": "11.11.1",
     "react": "18.2.0",
     "react-colorful": "5.6.1",
     "react-dom": "18.2.0",
     "react-switch": "7.0.0",
     "react-textra": "0.2.0",
     "tauri-plugin-autostart-api": "https://github.com/tauri-apps/tauri-plugin-autostart",
-    "tauri-settings": "0.3.3",
-    "the-new-css-reset": "1.9.0",
-    "zustand": "4.3.8"
+    "tauri-settings": "0.3.4",
+    "the-new-css-reset": "1.11.0",
+    "zustand": "4.4.1"
   },
   "devDependencies": {
     "@tauri-apps/cli": "1.4.0",
     "@types/node": "18.15.11",
-    "@types/react": "18.2.14",
-    "@types/react-dom": "18.2.6",
-    "@vitejs/plugin-react": "4.0.1",
+    "@types/react": "18.2.23",
+    "@types/react-dom": "18.2.8",
+    "@vitejs/plugin-react": "4.1.0",
     "semantic-release": "21.0.6",
-    "typescript": "5.1.6",
-    "vite": "4.3.9"
+    "typescript": "5.2.2",
+    "vite": "4.4.9"
   },
   "repository": "dubisdev/runmath"
 }
