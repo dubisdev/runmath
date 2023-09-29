@@ -74,6 +74,7 @@
       ]
     },
     "security": {
+      "dangerousDisableAssetCspModification": true,
       "csp": "default-src 'self'; style-src 'self' 'unsafe-inline';connect-src api.github.com"
     },
     "updater": {
