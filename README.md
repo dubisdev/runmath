@@ -30,6 +30,8 @@
 
 <p align="center">
 <img src="./assets/readme-animation.gif" width="734" />
+<img src="./assets/1.png" width="734" />
+<img src="./assets/2.png" width="734" />
 
 > **Note**: Feel free to open an issue if you have any suggestions or ideas for new features!
 
