@@ -56,6 +56,21 @@ Configure the app to your liking! For now, you can change:
 - Background color
 - Run app on startup or not
 
+## 🔐 Privacy Policy
+
+RunMath does NOT:
+
+- collect any personal information,
+- track you,
+- send your keystrokes to any server,
+- send any data to any server.
+
+All the calculations are done locally on your computer.
+Your preferences are stored locally on your computer.
+
+The Windows Store version does not have update checks,
+so it does not connect to any server.
+
 ## ⚖️ License
 
 [MIT](./LICENSE.md) © [David Jimenez](https://dubis.dev)
