@@ -1,10 +1,7 @@
-// wrapper for localStorage
-import type { Schema } from "./settingsStorage";
-
-export function get(key: keyof Schema) {
+export function get(key: string) {
   return localStorage.getItem(key);
 }
 
-export function set<T extends keyof Schema>(key: T, value: Schema[T]) {
-  return localStorage.setItem(key, String(value));
+export function set(key: string, value: string) {
+  return localStorage.setItem(key, value);
 }

@@ -1,8 +1,8 @@
 {
   "$schema": "../node_modules/@tauri-apps/cli/schema.json",
   "build": {
-    "beforeBuildCommand": "yarn build",
-    "beforeDevCommand": "yarn dev",
+    "beforeBuildCommand": "pnpm build",
+    "beforeDevCommand": "pnpm dev",
     "devPath": "http://localhost:3000",
     "distDir": "../dist"
   },
@@ -33,19 +33,6 @@
         "show": true,
         "startDragging": true,
         "setSize": true
-      },
-      "fs": {
-        "createDir": true,
-        "readDir": true,
-        "readFile": true,
-        "writeFile": true,
-        "scope": [
-          "$APPCONFIG",
-          "$APPCONFIG/*"
-        ]
-      },
-      "path": {
-        "all": true
       },
       "notification": {
         "all": true

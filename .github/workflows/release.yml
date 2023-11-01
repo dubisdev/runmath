@@ -13,13 +13,18 @@ jobs:
       - name: setup node
         uses: actions/setup-node@v3
         with:
-          node-version: 18
+          node-version: 20
+
+      - uses: pnpm/action-setup@v2
+        name: Install pnpm
+        with:
+          version: 8
 
       - name: Install app dependencies
-        run: yarn
+        run: pnpm i
 
       - name: Run typecheck
-        run: yarn tsc
+        run: pnpm tsc
 
   semantic-release:
     runs-on: ubuntu-latest
@@ -35,13 +40,16 @@ jobs:
       - name: setup node
         uses: actions/setup-node@v3
         with:
-          node-version: 18
+          node-version: 20
+      
+      - uses: pnpm/action-setup@v2
+        name: Install pnpm
+        with:
+          version: 8
 
       - name: Semantic Release
         id: semantic
-        uses: cycjimmy/semantic-release-action@v3
-        with:
-          semantic_version: 19
+        uses: cycjimmy/semantic-release-action@v4
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
 
@@ -57,7 +65,12 @@ jobs:
       - name: setup node
         uses: actions/setup-node@v3
         with:
-          node-version: 18
+          node-version: 20
+
+      - uses: pnpm/action-setup@v2
+        name: Install pnpm
+        with:
+          version: 8
 
       - name: install Rust stable
         uses: dtolnay/rust-toolchain@stable
@@ -67,7 +80,7 @@ jobs:
           workspaces: "./src-tauri -> target"
 
       - name: Install app dependencies
-        run: yarn
+        run: pnpm i
       
       - name: bump package version
         run: npm pkg set version="${{ needs.semantic-release.outputs.release_version }}"

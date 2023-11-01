@@ -1,16 +1,17 @@
 import { settings } from "@utils/settingsStorage";
 import styles from "./index.module.css";
-import * as ls from "@utils/localStorage";
 import { Checkbox } from "./Checkbox";
 
 export const RunOnStart = () => {
   const handleChange = (newValue: boolean) => {
-    ls.set("runOnWindowsStart", newValue);
+    settings.set("runOnWindowsStart", newValue);
   };
+
+  const checkedState = settings.get("runOnWindowsStart") === "true";
 
   return (
     <Checkbox
-      checked={settings.getCache("runOnWindowsStart")}
+      checked={checkedState}
       onChange={handleChange}
       className={styles.settingValue}
     />
