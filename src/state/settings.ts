@@ -1,16 +1,25 @@
+import type { FormatOptions } from "mathjs"
 import { create } from "zustand";
 import { persist, subscribeWithSelector } from "zustand/middleware";
 import { share } from "shared-zustand";
 import { configureRunOnStart } from "@utils/runOnStart";
 
-type RunmathSettings = {
+export type CalculationOptions = {
+    useBigNumbers: boolean;
+    notation: FormatOptions["notation"];
+}
+
+type RunmathSettings = CalculationOptions & {
     backgroundColor: string;
     runOnWindowsStart: boolean;
+
 }
 
 const defaultSettings: Readonly<RunmathSettings> = Object.freeze({
     backgroundColor: "#a3c8ff",
     runOnWindowsStart: false,
+    useBigNumbers: false,
+    notation: undefined
 })
 
 type SettingsState = RunmathSettings & {

@@ -1,20 +1,23 @@
 import { create } from "zustand";
-import { useCalculator } from "../hooks/useCalculator";
 
 interface BasicCalculatorState {
   input: string;
   setInput: (input: string) => void;
 
-  result: number | string | null;
+  result: string | null;
+  setResult: (result: string | null) => void;
 }
 
 export const useCalculatorStore = create<BasicCalculatorState>((set) => ({
   input: "",
-  result: 0,
+  result: "",
 
-  setInput: (input: string) => {
-    const { calculate } = useCalculator();
-    const result = calculate(input);
-    set({ input, result });
+  setInput: (input) => {
+    set({ input });
   },
+
+  setResult: (result) => {
+    set({ result });
+  },
+
 }));
