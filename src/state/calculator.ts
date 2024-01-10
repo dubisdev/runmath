@@ -1,5 +1,5 @@
 import { create } from "zustand";
-import { calculateResult } from "@utils/runinput";
+import { useCalculator } from "../hooks/useCalculator";
 
 interface BasicCalculatorState {
   input: string;
@@ -13,7 +13,8 @@ export const useCalculatorStore = create<BasicCalculatorState>((set) => ({
   result: 0,
 
   setInput: (input: string) => {
-    const result = calculateResult(input);
+    const { calculate } = useCalculator();
+    const result = calculate(input);
     set({ input, result });
   },
 }));

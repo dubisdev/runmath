@@ -8,10 +8,10 @@ type RunmathSettings = {
     runOnWindowsStart: boolean;
 }
 
-const defaultSettings: RunmathSettings = {
+const defaultSettings: Readonly<RunmathSettings> = Object.freeze({
     backgroundColor: "#a3c8ff",
     runOnWindowsStart: false,
-}
+})
 
 type SettingsState = RunmathSettings & {
     setBackgrounColor: (color: RunmathSettings["backgroundColor"]) => void;
