@@ -25,6 +25,8 @@ const defaultSettings: Readonly<RunmathSettings> = Object.freeze({
 type SettingsState = RunmathSettings & {
     setBackgrounColor: (color: RunmathSettings["backgroundColor"]) => void;
     setRunOnWindowsStart: (runOnWindowsStart: RunmathSettings["runOnWindowsStart"]) => void;
+    setUseBigNumbers: (useBigNumbers: RunmathSettings["useBigNumbers"]) => void;
+    setNotation: (notation: RunmathSettings["notation"]) => void;
     reset: () => void;
 }
 
@@ -42,6 +44,10 @@ const useSettingsStore = create<SettingsState>()(
                     set({ runOnWindowsStart })
                 },
 
+                setUseBigNumbers: (useBigNumbers) => set({ useBigNumbers }),
+
+                setNotation: (notation) => set({ notation }),
+
                 reset: () => {
                     configureRunOnStart(defaultSettings.runOnWindowsStart);
                     set(defaultSettings)
@@ -54,8 +60,9 @@ const useSettingsStore = create<SettingsState>()(
 );
 
 if ("BroadcastChannel" in globalThis) {
-    share("backgroundColor", useSettingsStore);
-    share("runOnWindowsStart", useSettingsStore);
+    for (const key in defaultSettings) {
+        share(key, useSettingsStore);
+    }
 }
 
 export { useSettingsStore }

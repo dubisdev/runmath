@@ -2,18 +2,36 @@ import styles from "./index.module.css";
 import { useSettingsStore } from "@state/settings";
 import { BGColor } from "./BGColor";
 import { RunOnStart } from "./RunOnStart";
+import { UseBigNumbers } from "./UseBigNumbers";
+import { FormatSelector } from "./FormatSelector";
 
 const SETTINGS = [
+  {
+    name: "Use Big Numbers",
+    description:
+      "Add support for big numbers (numbers with more than 16 digits). This will make the app slower, so it's recommended to turn it off if you don't need it.",
+    SettingElement: UseBigNumbers,
+  },
+
+  {
+    name: "Output Format",
+    description: `Auto (Default): RunMath will try to adjust the output for you.
+    Fixed: fixed notation.
+    Exponential: Scientific notation.
+    Engineering: Scientific notation with multiples of 3.`,
+    SettingElement: FormatSelector,
+  },
+
+  {
+    name: "Background Color",
+    description: "Change the background color of the app",
+    SettingElement: BGColor,
+  },
   {
     name: "Start RunMath on Windows Start",
     description:
       "RunMath will start automatically when you turn on your computer",
     SettingElement: RunOnStart,
-  },
-  {
-    name: "Background Color",
-    description: "Change the background color of the app",
-    SettingElement: BGColor,
   },
 ] as const;
 

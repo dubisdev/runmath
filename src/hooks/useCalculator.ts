@@ -26,7 +26,7 @@ export const calculateResult = (expression: string, config: CalculationOptions) 
 
     const res = mathjs.evaluate(expression);
 
-    if (typeOf(res) === "number") return format(res, { notation, precision: 14 });
+    if (typeOf(res) === "number") return format(res, { notation, precision: notation !== "fixed" ? 14 : undefined });
 
     // Big Numbeers precision is set to 64 by default (enough for 99.99999999999999% of cases)
     if (typeOf(res) === "BigNumber") return format(res, { notation });
