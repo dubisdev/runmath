@@ -34,6 +34,7 @@ const useSettingsStore = create<SettingsState>()(
                 },
 
                 reset: () => {
+                    configureRunOnStart(defaultSettings.runOnWindowsStart);
                     set(defaultSettings)
                 }
             }),
