@@ -21,6 +21,7 @@
     "react-dom": "18.2.0",
     "react-switch": "7.0.0",
     "react-textra": "0.2.0",
+    "shared-zustand": "2.0.0",
     "tauri-plugin-autostart-api": "https://github.com/tauri-apps/tauri-plugin-autostart",
     "the-new-css-reset": "1.11.2",
     "zustand": "4.4.7"

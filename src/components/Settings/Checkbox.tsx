@@ -1,5 +1,3 @@
-import { useEffect, useState } from "react";
-
 import ReactSwitch from "react-switch";
 
 type CheckboxProps = {
@@ -11,26 +9,20 @@ type CheckboxProps = {
 export const Checkbox = (props: CheckboxProps) => {
   const { checked, onChange, className } = props;
 
-  const [isChecked, setIsChecked] = useState(() => checked);
-
-  useEffect(() => {
-    onChange(isChecked);
-  }, [isChecked]);
-
   const handleChange = (newValue: boolean) => {
-    setIsChecked(newValue);
+    onChange(newValue);
   };
 
   const handleKeyDown = (event: React.KeyboardEvent<HTMLInputElement>) => {
     if (event.key === "Enter") {
-      setIsChecked((prev) => !prev);
+      onChange(!checked);
     }
   };
 
   return (
     <ReactSwitch
       className={className}
-      checked={isChecked}
+      checked={checked}
       onChange={handleChange}
       onKeyDown={handleKeyDown}
       onColor="#495662"

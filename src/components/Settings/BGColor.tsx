@@ -1,15 +1,17 @@
 import { HexColorPicker } from "react-colorful";
-import { settings } from "@utils/settingsStorage";
 import "./bgcolor.css";
+import { useSettingsStore } from "@state/settings";
 
 export const BGColor = () => {
+  const [backgroundColor, setBackgroundColor] = useSettingsStore(s => [s.backgroundColor, s.setBackgrounColor]);
+
   const handlePickerChange = (color: string) => {
-    settings.set("background", color);
+    setBackgroundColor(color);
   };
 
   return (
     <HexColorPicker
-      color={settings.get("background")}
+      color={backgroundColor}
       onChange={handlePickerChange}
     />
   );

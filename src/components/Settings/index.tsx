@@ -1,5 +1,5 @@
 import styles from "./index.module.css";
-import { resetSettings } from "@utils/settingsStorage";
+import { useSettingsStore } from "@state/settings";
 import { BGColor } from "./BGColor";
 import { RunOnStart } from "./RunOnStart";
 
@@ -18,12 +18,13 @@ const SETTINGS = [
 ] as const;
 
 export const Settings = () => {
-  const handleResetSettings = async () => {
-    await resetSettings();
-    window.location.reload();
+  const resetSettings = useSettingsStore((s) => s.reset);
+
+  const handleResetSettings = () => {
+    resetSettings();
   };
 
-  const handleExitSettings = async () => {
+  const handleExitSettings = () => {
     import("@tauri-apps/api/window").then((module) =>
       module.getCurrent().close()
     );

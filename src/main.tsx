@@ -3,7 +3,6 @@ import ReactDOM from "react-dom/client";
 import { App } from "./App";
 
 import "./index.css";
-import "@utils/getInitialPreferences";
 
 ReactDOM.createRoot(document.getElementById("root")!).render(
   <React.StrictMode>
@@ -16,9 +15,6 @@ import("@utils/exitOnCloseMainWindow").then((module) =>
 );
 import("@utils/configureShortcuts").then((module) =>
   module.configureShortcuts()
-);
-import("@utils/settingsStorage").then((module) =>
-  module.startWatchingStorageEvents()
 );
 import("@utils/singleInstance").then((module) =>
   module.configureSingleInstance()
