@@ -20,7 +20,7 @@ export const FormatSelector = () => {
                 name="notation"
                 onChange={handleChange}
                 className={styles.selectFormatOptions}
-                defaultValue={notation || "auto"}
+                value={notation || "auto"}
             >
                 {
                     AVAILABLE_NOTATIONS.map((notationOption) => {
