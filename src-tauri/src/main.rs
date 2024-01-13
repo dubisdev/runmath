@@ -35,6 +35,7 @@ fn main() {
             SystemTrayEvent::MenuItemClick { id, .. } => match id.as_str() {
                 "quit" => std::process::exit(0),
                 "toggle" => toggle_window(app),
+                "settings" => open_settings_window(app),
                 _ => {}
             },
             _ => {}
@@ -46,8 +47,10 @@ fn main() {
 fn create_tray_menu() -> SystemTray {
     let quit = CustomMenuItem::new("quit".to_string(), "Quit");
     let toggle = CustomMenuItem::new("toggle".to_string(), "Toggle App");
+    let settings = CustomMenuItem::new("settings".to_string(), "Settings");
 
     let tray_menu = SystemTrayMenu::new()
+        .add_item(settings)
         .add_item(toggle)
         .add_native_item(SystemTrayMenuItem::Separator)
         .add_item(quit);
@@ -64,4 +67,8 @@ fn toggle_window(app: &AppHandle) {
         window.show().unwrap();
         return;
     }
+}
+
+fn open_settings_window(app: &AppHandle) {
+    app.emit_to("main", "open-settings", ()).unwrap();
 }

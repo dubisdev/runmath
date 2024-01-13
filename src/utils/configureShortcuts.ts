@@ -1,4 +1,5 @@
 import { register, unregisterAll } from "@tauri-apps/api/globalShortcut";
+import { listen } from "@tauri-apps/api/event";
 import { exit } from "@tauri-apps/api/process";
 import { open } from "@tauri-apps/api/shell";
 import { createSettingsPage } from "./createSettingsPage";
@@ -7,6 +8,10 @@ import { RELEASE_URL } from "./updateNotifier";
 
 export const configureShortcuts = () => {
   unregisterAll();
+
+  listen("open-settings", () => {
+    createSettingsPage();
+  })
 
   // register global shortcuts (works even when the app is not focused)
   register("Alt+m", toggleWindowVisibility);
