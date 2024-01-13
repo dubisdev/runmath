@@ -1,7 +1,7 @@
 import { register, unregisterAll } from "@tauri-apps/api/globalShortcut";
 import { exit } from "@tauri-apps/api/process";
 import { open } from "@tauri-apps/api/shell";
-import { createSettingsPage } from "./settingsPageLauncher";
+import { createSettingsPage } from "./createSettingsPage";
 import { toggleWindowVisibility } from "./toggleWindowView";
 import { RELEASE_URL } from "./updateNotifier";
 

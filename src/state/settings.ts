@@ -2,7 +2,7 @@ import type { FormatOptions } from "mathjs"
 import { create } from "zustand";
 import { persist, subscribeWithSelector } from "zustand/middleware";
 import { share } from "shared-zustand";
-import { configureRunOnStart } from "@utils/runOnStart";
+import { configureRunOnStart } from "@utils/configureRunOnStart";
 
 export type CalculationOptions = {
     useBigNumbers: boolean;
