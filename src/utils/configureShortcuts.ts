@@ -36,6 +36,11 @@ export const configureShortcuts = () => {
     }
 
   });
+
+  // prevent context menu from opening
+  window.addEventListener("contextmenu", (e) => {
+    e.preventDefault();
+  });
 };
 
 const isExitCommand = (e: KeyboardEvent) => e.key === "q" && e.altKey;
