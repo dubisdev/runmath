@@ -3,6 +3,8 @@ import { create } from "zustand";
 import { persist, subscribeWithSelector } from "zustand/middleware";
 import { share } from "shared-zustand";
 import { configureRunOnStart } from "@utils/configureRunOnStart";
+import { useCalculatorStore } from "./calculator";
+import { getCurrent } from "@tauri-apps/api/window";
 
 export type CalculationOptions = {
     useBigNumbers: boolean;
@@ -64,5 +66,24 @@ if ("BroadcastChannel" in globalThis) {
         share(key, useSettingsStore);
     }
 }
+
+// Force re-render to calculate when notation or useBigNumbers changes
+if (getCurrent().label === "main") {
+    useSettingsStore.subscribe(
+        async (newState, prevState) => {
+            const isNewNotation = newState.notation !== prevState.notation;
+            const iseDifferentBigNumbers = newState.useBigNumbers !== prevState.useBigNumbers;
+
+            if (isNewNotation || iseDifferentBigNumbers) {
+                const currentInput = useCalculatorStore.getState().input;
+
+                useCalculatorStore.setState({ input: "" })
+                await new Promise((resolve) => setTimeout(resolve, 10));
+                useCalculatorStore.setState({ input: currentInput + "" });
+            }
+        }
+    )
+}
+
 
 export { useSettingsStore }
