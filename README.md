@@ -1,5 +1,5 @@
 <p align="center">
-  <a href="https://github.com/dubisdev/runmath">
+  <a href="https://github.com/kiimesoft/runmath">
     <img alt="Runmath icon" src="./src-tauri/icons/128x128.png"/>
   </a>
 </p>
@@ -13,7 +13,7 @@
 </p>
 
 <p align="center">
-  <a href="https://github.com/dubisdev/runmath/releases/latest">
+  <a href="https://github.com/kiimesoft/runmath/releases/latest">
     🔗 Go to Download Page
   </a>
     &nbsp; | &nbsp; Give it a Star ⭐ | &nbsp;
@@ -22,10 +22,10 @@
 
 <p align="center">
   <img
-      src="https://img.shields.io/github/v/tag/dubisdev/runmath?label=Version&style=flat-square"
+      src="https://img.shields.io/github/v/tag/kiimesoft/runmath?label=Version&style=flat-square"
       alt="Last available version" />
   <img
-      src="https://img.shields.io/github/downloads/dubisdev/runmath/total.svg?style=flat-square&color=blue&label=Downloads"
+      src="https://img.shields.io/github/downloads/kiimesoft/runmath/total.svg?style=flat-square&color=blue&label=Downloads"
       alt="Total downloads" />
 </p>
 

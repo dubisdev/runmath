@@ -1,8 +1,8 @@
 import { getVersion } from "@tauri-apps/api/app";
 import { requestPermission, isPermissionGranted, sendNotification } from "@tauri-apps/api/notification";
 
-export const RELEASE_URL = "https://github.com/dubisdev/RunMath/releases/latest";
-export const API_RELEASE_URL = "https://api.github.com/repos/dubisdev/RunMath/releases/latest";
+export const RELEASE_URL = "https://github.com/kiimesoft/RunMath/releases/latest";
+export const API_RELEASE_URL = "https://api.github.com/repos/kiimesoft/RunMath/releases/latest";
 
 export const checkForUpdates = async () => {
     if (navigator.onLine === false) return;
