@@ -1,12 +1,16 @@
 <p align="center">
   <a href="https://github.com/dubisdev/runmath">
-    <img src="./src-tauri/icons/128x128.png"/>
+    <img alt="Runmath icon" src="./src-tauri/icons/128x128.png"/>
   </a>
 </p>
 
 <h1 align="center">RunMath</h1>
 
-<p align="center">A keyboard-first calculator for Windows - Do math, <i>quickly 🚀</i></p>
+<p align="center">
+  <strong>A keyboard-first calculator for Windows - Do math, <i>quickly 🚀</i></strong>
+  <br/>
+  <i>Built with ❤️‍🔥 by <a href="https://github.com/dubisdev">@dubisdev</a></i>
+</p>
 
 <p align="center">
   <a href="https://github.com/dubisdev/runmath/releases/latest">
@@ -14,10 +18,15 @@
   </a>
     &nbsp; | &nbsp; Give it a Star ⭐ | &nbsp;
     <a href="https://www.buymeacoffee.com/dubisdev">Support the project 🤝</a>
-    &nbsp; | &nbsp;
-    <a href="https://twitter.com/intent/tweet?text=I%27m%20using%20%23RunMath%20-%20A%20keyboard-first%20alternative%20to%20the%20Windows%20calculator%20by%20%40dubisdev%0A%0Ahttps%3A%2F%2Fgithub.com%2Fdubisdev%2Frunmath">
-      Share it on Twitter 🐦
-    </a>
+</p>
+
+<p align="center">
+  <img
+      src="https://img.shields.io/github/v/tag/dubisdev/runmath?label=Version&style=flat-square"
+      alt="Last available version" />
+  <img
+      src="https://img.shields.io/github/downloads/dubisdev/runmath/total.svg?style=flat-square&color=blue&label=Downloads"
+      alt="Total downloads" />
 </p>
 
 <hr />
@@ -29,11 +38,12 @@
 - `Unit conversion` (ex: 1m to cm = 100)
 
 <p align="center">
-<img src="./assets/readme-animation.gif" width="734" />
-<img src="./assets/1.png" width="734" />
-<img src="./assets/2.png" width="734" />
+<img alt="Animated runmath gif" src="./assets/readme-animation.gif" width="734" />
+<img alt="Runmath capabilities" src="./assets/1.png" width="734" />
+<img alt="Runmath available config options" src="./assets/2.png" width="734" />
 
-> **Note**: Feel free to open an issue if you have any suggestions or ideas for new features!
+> **Note**: Feel free to open an issue if you have
+> any suggestions or ideas for new features!
 
 ## 🚄 Shortcuts
 
