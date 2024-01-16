@@ -25,6 +25,7 @@ export const ConsoleInput = () => {
       {!input && <InputPlaceholder />}
       <input
         autoFocus
+        spellCheck={false}
         className={styles.consoleInput}
         value={input}
         onKeyDown={handleKeyDown}
