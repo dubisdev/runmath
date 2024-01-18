@@ -66,11 +66,7 @@ Configure the app to your liking! For now, you can change:
 - Background color
 - Run app on startup or not
 - Use Big Numbers (for calculations with big numbers > 15 digits)
-- Output format:
-  - Scientific notation: 1.2345e+5
-  - Fixed point: 1234567.89
-  - Engineering notation: 1.23456789e+6 (exponents are multiples of 3)
-  - Auto: scientific notation for numbers < 0.0001 or > 9999999, fixed point otherwise
+- Output format (scientific, fixed, engineering, auto)
 
 ## 🔐 Privacy Policy
 
