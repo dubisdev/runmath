@@ -24,7 +24,7 @@
     "shared-zustand": "2.0.0",
     "tauri-plugin-autostart-api": "https://github.com/tauri-apps/tauri-plugin-autostart",
     "the-new-css-reset": "1.11.2",
-    "zustand": "4.4.7"
+    "zustand": "4.5.0"
   },
   "devDependencies": {
     "@tauri-apps/cli": "1.5.9",
@@ -34,7 +34,7 @@
     "@vitejs/plugin-react": "4.2.1",
     "semantic-release": "23.0.0",
     "typescript": "5.3.3",
-    "vite": "5.0.11"
+    "vite": "5.0.12"
   },
   "repository": "kiimesoft/runmath"
 }
