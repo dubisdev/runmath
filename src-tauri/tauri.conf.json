@@ -14,6 +14,14 @@
     "systemTray": {
       "iconPath": "icons/app-icon.png"
     },
+    "cli": {
+      "args": [
+        {
+          "name": "hidden",
+          "short": "h"
+        }
+      ]
+    },
     "allowlist": {
       "globalShortcut": {
         "all": true

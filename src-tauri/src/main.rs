@@ -22,7 +22,7 @@ fn main() {
     tauri::Builder::default()
         .plugin(tauri_plugin_autostart::init(
             MacosLauncher::LaunchAgent,
-            Some(vec![""]),
+            Some(vec!["--hidden"]),
         ))
         .plugin(tauri_plugin_single_instance::init(|app, argv, cwd| {
             app.emit_all("single-instance", Payload { args: argv, cwd })
