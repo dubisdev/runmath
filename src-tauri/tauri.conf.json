@@ -81,7 +81,7 @@
     "updater": {
       "active": true,
       "endpoints": [
-        "https://github.com/kiimesoft/runmath/releases/latest/download/latest.json"
+        "https://github.com/dubisdev/runmath/releases/latest/download/latest.json"
       ],
       "dialog": true,
       "pubkey": "dW50cnVzdGVkIGNvbW1lbnQ6IG1pbmlzaWduIHB1YmxpYyBrZXk6IDFBMzM2NDgwQjQwQzFEOApSV1RZd1VBTFNEYWpBWFpMTlIxSzVYdEhjSDFqTTdPcFkwUEQzVHFsWlZ6a1dGRGFKdHY0UFBmbQo=",
