@@ -1,7 +1,7 @@
 import React from "react";
 import ReactDOM from "react-dom/client";
 import { App } from "./App";
-import { getMatches } from "@tauri-apps/api/cli";
+import { getMatches } from "@tauri-apps/plugin-cli";
 import { getCurrent } from "@tauri-apps/api/window";
 import "./index.css";
 
@@ -9,7 +9,7 @@ import "./index.css";
 getMatches().then((matches) => {
   const shouldHide = matches.args.hidden.value
   if (shouldHide) {
-    getCurrent().hide()
+    getCurrent().hide();
   }
 })
 

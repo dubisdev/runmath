@@ -1,12 +1,12 @@
 import { useEffect } from "react"
-import { appWindow, LogicalSize } from "@tauri-apps/api/window"
+import { getCurrent, LogicalSize } from "@tauri-apps/api/window"
 
 export const useBiggerScreen = () => {
     useEffect(() => {
-        appWindow.setSize(new LogicalSize(700, 88))
+        getCurrent().setSize(new LogicalSize(700, 88))
 
         return () => {
-            appWindow.setSize(new LogicalSize(700, 46))
+            getCurrent().setSize(new LogicalSize(700, 46))
         }
     }, [])
 }

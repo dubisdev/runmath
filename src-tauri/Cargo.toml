@@ -12,14 +12,18 @@ rust-version = "1.57"
 # See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
 
 [build-dependencies]
-tauri-build = { version = "1.5", features = [] }
+tauri-build = { version = "2.0.0-beta", features = [] }
 
 [dependencies]
 serde_json = "1.0"
 serde = { version = "1.0", features = ["derive"] }
-tauri = { version = "1.6", features = [ "cli", "clipboard-write-text", "global-shortcut-all", "notification-all", "process-exit", "shell-open", "system-tray", "updater", "window-close", "window-create", "window-hide", "window-set-focus", "window-set-size", "window-show", "window-start-dragging", "window-unminimize"] }
-tauri-plugin-autostart = { git = "https://github.com/tauri-apps/plugins-workspace", branch = "v1" }
-tauri-plugin-single-instance = { git = "https://github.com/tauri-apps/plugins-workspace", branch = "v1" }
+tauri = { version = "2.0.0-beta", features = ["tray-icon"] }
+tauri-plugin-autostart = "2.0.0-beta"
+tauri-plugin-single-instance = "2.0.0-beta"
+tauri-plugin-clipboard-manager = "2.1.0-beta"
+tauri-plugin-process = "2.0.0-beta.3"
+tauri-plugin-shell = "2.0.0-beta.3"
+tauri-plugin-notification = "2.0.0-beta.3"
 
 [features]
 # by default Tauri runs in production mode
@@ -28,3 +32,7 @@ default = [ "custom-protocol" ]
 # this feature is used used for production builds where `devPath` points to the filesystem
 # DO NOT remove this
 custom-protocol = [ "tauri/custom-protocol" ]
+
+[target."cfg(not(any(target_os = \"android\", target_os = \"ios\")))".dependencies]
+tauri-plugin-cli = "2.0.0-beta.3"
+tauri-plugin-global-shortcut = "2.0.0-beta.3"

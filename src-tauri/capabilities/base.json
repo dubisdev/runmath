@@ -1,0 +1,31 @@
+{
+  "$schema": "../gen/schemas/desktop-schema.json",
+  "identifier": "base",
+  "description": "Basic capabilities needed for the correct functioning of the application",
+  "local": true,
+  "platforms": [
+    "windows"
+  ],
+  "windows": [
+    "main"
+  ],
+  "permissions": [
+    "app:allow-version",
+    "event:allow-listen",
+    "menu:default",
+    "tray:default",
+    "cli:allow-cli-matches",
+    "process:allow-exit",
+    "shell:allow-open",
+    "notification:default",
+    "autostart:allow-enable",
+    "autostart:allow-disable",
+    "autostart:allow-is-enabled",
+    "global-shortcut:allow-register",
+    "global-shortcut:allow-unregister-all",
+    "clipboard-manager:allow-write-text",
+    "window:allow-create",
+    "window:allow-start-dragging",
+    "webview:allow-internal-toggle-devtools"
+  ]
+}

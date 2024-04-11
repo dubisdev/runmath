@@ -1,5 +1,5 @@
 import { getVersion } from "@tauri-apps/api/app";
-import { requestPermission, isPermissionGranted, sendNotification } from "@tauri-apps/api/notification";
+import { requestPermission, isPermissionGranted, sendNotification } from "@tauri-apps/plugin-notification";
 
 export const RELEASE_URL = "https://github.com/dubisdev/RunMath/releases/latest";
 export const API_RELEASE_URL = "https://api.github.com/repos/dubisdev/RunMath/releases/latest";
