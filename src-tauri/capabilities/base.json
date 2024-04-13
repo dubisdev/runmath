@@ -26,6 +26,13 @@
     "clipboard-manager:allow-write-text",
     "window:allow-create",
     "window:allow-start-dragging",
-    "webview:allow-internal-toggle-devtools"
+    "window:allow-is-visible",
+    "window:allow-show",
+    "window:allow-hide",
+    "window:allow-set-focus",
+    "window:allow-unminimize",
+    "window:allow-close",
+    "webview:allow-internal-toggle-devtools",
+    "webview:allow-create-webview"
   ]
 }
