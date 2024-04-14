@@ -1,10 +1,10 @@
-import { Webview } from "@tauri-apps/api/webview";
-import { Window } from "@tauri-apps/api/window";
+import { WebviewWindow } from "@tauri-apps/api/webviewWindow";
 
 const SETTINGS_PAGE_LABEL = "settings-page";
 
 export const createSettingsPage = () => {
-  const settingsPage = new Window(SETTINGS_PAGE_LABEL, {
+  const settingsPage = new WebviewWindow(SETTINGS_PAGE_LABEL, {
+    url: "./settings.html",
     alwaysOnTop: true,
     height: 600,
     resizable: false,
@@ -12,15 +12,6 @@ export const createSettingsPage = () => {
     visible: false,
     width: 700,
   });
-
-  const settingsWebview = new Webview(settingsPage, "settings", {
-    url: "settings.html",
-    height: 600,
-    width: 700,
-    x: 0,
-    y: 0,
-  });
-
 
   settingsPage.once("tauri://created", () => {
     settingsPage.show();
