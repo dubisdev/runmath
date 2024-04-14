@@ -2,11 +2,11 @@
     all(not(debug_assertions), target_os = "windows"),
     windows_subsystem = "windows"
 )]
-use std::string::String;
 
-use tauri::{AppHandle, Manager};
+use tauri::tray::ClickType;
+use tauri::{App, AppHandle, Manager};
 
-use tauri::menu::{MenuBuilder, MenuId, MenuItemBuilder};
+use tauri::menu::{MenuBuilder, MenuItemBuilder};
 
 use tauri_plugin_autostart::MacosLauncher;
 
@@ -35,53 +35,48 @@ fn main() {
             app.emit("single-instance", Payload { args: argv, cwd })
                 .unwrap();
         }))
-        // .on_system_tray_event(|app, event| match event {
-        //     SystemTrayEvent::LeftClick { .. } => toggle_window(app),
-        //     SystemTrayEvent::MenuItemClick { id, .. } => match id.as_str() {
-        //         "quit" => std::process::exit(0),
-        //         "toggle" => toggle_window(app),
-        //         "settings" => open_settings_window(app),
-        //         _ => {}
-        //     },
-        //     _ => {}
-        // })
+        .setup(|app| {
+            configure_tray_menu(&app)?;
+            Ok(())
+        })
         .run(context)
         .expect("error while running tauri application");
 }
 
-fn configure_tray_menu(app: &AppHandle) {
-    let quit_id = MenuId::new("quit");
-    let toggle_id = MenuId::new("toggle");
-    let settings_id = MenuId::new("settings");
-
+fn configure_tray_menu(app: &App) -> Result<(), tauri::Error> {
     let quit = MenuItemBuilder::new("Quit".to_string())
-        .id(quit_id)
-        .build(app)
-        .unwrap();
+        .id("quit")
+        .build(app)?;
     let toggle = MenuItemBuilder::new("Toggle".to_string())
-        .id(toggle_id)
-        .build(app)
-        .unwrap();
+        .id("toggle")
+        .build(app)?;
     let settings = MenuItemBuilder::new("Settings".to_string())
-        .id(settings_id)
-        .build(app)
-        .unwrap();
+        .id("settings")
+        .build(app)?;
 
     let tray_menu = MenuBuilder::new(app)
         .items(&[&settings, &toggle, &quit])
-        .build()
-        .unwrap();
+        .build()?;
 
     let tray_icon = app.tray_by_id("main").unwrap();
 
-    tray_icon.set_menu(Some(tray_menu)).unwrap();
+    tray_icon.set_menu(Some(tray_menu))?;
 
-    tray_icon.on_menu_event(|app, event| match event.id {
-        quit_id => std::process::exit(0),
-        toggle_id => toggle_window(app),
-        settings_id => open_settings_window(app),
+    tray_icon.on_menu_event(|app, event| match event.id.as_ref() {
+        "quit" => std::process::exit(0),
+        "toggle" => toggle_window(app),
+        "settings" => open_settings_window(app),
         _ => {}
     });
+
+    tray_icon.on_tray_icon_event(|tray, event| {
+        if event.click_type == ClickType::Left {
+            let app = tray.app_handle();
+            toggle_window(app);
+        }
+    });
+
+    Ok(())
 }
 
 fn toggle_window(app: &AppHandle) {
@@ -91,6 +86,7 @@ fn toggle_window(app: &AppHandle) {
         return;
     } else {
         window.show().unwrap();
+        window.set_focus().unwrap();
         return;
     }
 }
