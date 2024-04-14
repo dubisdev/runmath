@@ -7,7 +7,7 @@ import "./index.css";
 
 // Start hidden if the arg is present (e.g. when the auto-launcher starts the app)
 getMatches().then((matches) => {
-  const shouldHide = matches.args.hidden.value
+  const shouldHide = matches.args["start-hidden"].value
   if (shouldHide) {
     getCurrent().hide();
   }
