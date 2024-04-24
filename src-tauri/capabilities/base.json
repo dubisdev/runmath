@@ -10,14 +10,12 @@
     "main"
   ],
   "permissions": [
-    "app:allow-version",
     "event:allow-listen",
     "menu:default",
     "tray:default",
     "cli:allow-cli-matches",
     "process:allow-exit",
-    "shell:allow-open",
-    "notification:default",
+    "process:allow-restart",
     "autostart:allow-enable",
     "autostart:allow-disable",
     "autostart:allow-is-enabled",
@@ -33,6 +31,9 @@
     "window:allow-close",
     "window:allow-set-size",
     "webview:allow-internal-toggle-devtools",
-    "webview:allow-create-webview-window"
+    "webview:allow-create-webview-window",
+    "updater:allow-check",
+    "updater:allow-download-and-install",
+    "dialog:allow-ask"
   ]
 }

@@ -22,9 +22,8 @@ tauri-plugin-autostart = "2.0.0-beta"
 tauri-plugin-single-instance = "2.0.0-beta"
 tauri-plugin-clipboard-manager = "2.1.0-beta"
 tauri-plugin-process = "2.0.0-beta"
-tauri-plugin-shell = "2.0.0-beta"
-tauri-plugin-notification = "2.0.0-beta"
 tauri-plugin-updater = "2.0.0-beta"
+tauri-plugin-dialog = "2.0.0-beta"
 
 [features]
 # by default Tauri runs in production mode
