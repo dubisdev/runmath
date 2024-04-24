@@ -21,8 +21,9 @@
     "@tauri-apps/plugin-notification": "latest",
     "@tauri-apps/plugin-process": "latest",
     "@tauri-apps/plugin-shell": "latest",
+    "@tauri-apps/plugin-updater": "latest",
     "just-debounce": "1.1.0",
-    "mathjs": "12.4.1",
+    "mathjs": "12.4.2",
     "react": "18.2.0",
     "react-colorful": "5.6.1",
     "react-dom": "18.2.0",
@@ -35,12 +36,12 @@
   "devDependencies": {
     "@tauri-apps/cli": "next",
     "@types/node": "20.12.7",
-    "@types/react": "18.2.78",
+    "@types/react": "18.2.79",
     "@types/react-dom": "18.2.25",
     "@vitejs/plugin-react": "4.2.1",
     "semantic-release": "23.0.8",
     "typescript": "5.4.5",
-    "vite": "5.2.8"
+    "vite": "5.2.10"
   },
   "repository": "dubisdev/runmath"
 }

@@ -17,10 +17,8 @@ struct Payload {
 }
 
 fn main() {
-    // let tray = create_tray_menu();
-    let context = tauri::generate_context!();
-
     tauri::Builder::default()
+        .plugin(tauri_plugin_updater::Builder::new().build())
         .plugin(tauri_plugin_notification::init())
         .plugin(tauri_plugin_global_shortcut::Builder::new().build())
         .plugin(tauri_plugin_shell::init())
@@ -39,7 +37,7 @@ fn main() {
             configure_tray_menu(&app)?;
             Ok(())
         })
-        .run(context)
+        .run(tauri::generate_context!())
         .expect("error while running tauri application");
 }
 

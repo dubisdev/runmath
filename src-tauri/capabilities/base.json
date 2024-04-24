@@ -22,7 +22,7 @@
     "autostart:allow-disable",
     "autostart:allow-is-enabled",
     "global-shortcut:allow-register",
-    "global-shortcut:allow-unregister-all",
+    "global-shortcut:allow-unregister",
     "clipboard-manager:allow-write-text",
     "window:allow-start-dragging",
     "window:allow-is-visible",
