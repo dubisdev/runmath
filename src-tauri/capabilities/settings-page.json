@@ -1,0 +1,32 @@
+{
+    "$schema": "../gen/schemas/desktop-schema.json",
+    "identifier": "settings-page",
+    "description": "Capabilities used by the settings page",
+    "local": true,
+    "platforms": [
+        "windows"
+    ],
+    "windows": [
+        "settings-page"
+    ],
+    "permissions": [
+        "event:allow-listen",
+        "menu:default",
+        "tray:default",
+        "autostart:allow-enable",
+        "autostart:allow-disable",
+        "autostart:allow-is-enabled",
+        "window:allow-start-dragging",
+        "window:allow-is-visible",
+        "window:allow-show",
+        "window:allow-hide",
+        "window:allow-set-focus",
+        "window:allow-unminimize",
+        "window:allow-close",
+        "window:allow-set-size",
+        "webview:allow-internal-toggle-devtools",
+        "webview:allow-create-webview-window",
+        "updater:allow-check",
+        "updater:allow-download-and-install"
+    ]
+}
