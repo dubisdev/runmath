@@ -1,27 +1,27 @@
-import { WebviewWindow } from "@tauri-apps/api/window";
+import { WebviewWindow } from "@tauri-apps/api/webviewWindow";
 
 const SETTINGS_PAGE_LABEL = "settings-page";
 
 export const createSettingsPage = () => {
-  const webview = new WebviewWindow(SETTINGS_PAGE_LABEL, {
+  const settingsPage = new WebviewWindow(SETTINGS_PAGE_LABEL, {
+    url: "./settings.html",
     alwaysOnTop: true,
     height: 600,
     resizable: false,
     title: "RunMath Settings",
-    url: "settings.html",
     visible: false,
     width: 700,
   });
 
-  webview.once("tauri://created", () => {
-    webview.show();
+  settingsPage.once("tauri://created", () => {
+    settingsPage.show();
   });
 
-  webview.once<"tauri://error">("tauri://error", async (e) => {
+  settingsPage.once<"tauri://error">("tauri://error", async (e) => {
     if (e.payload.includes(` \`${SETTINGS_PAGE_LABEL}\` already exists`)) {
-      await webview.unminimize();
-      await webview.show();
-      await webview.setFocus();
+      await settingsPage.unminimize();
+      await settingsPage.show();
+      await settingsPage.setFocus();
       return;
     }
     console.error(e);

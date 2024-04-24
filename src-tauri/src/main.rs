@@ -3,10 +3,11 @@
     windows_subsystem = "windows"
 )]
 
-use tauri::{
-    AppHandle, CustomMenuItem, Manager, SystemTray, SystemTrayEvent, SystemTrayMenu,
-    SystemTrayMenuItem,
-};
+use tauri::tray::ClickType;
+use tauri::{App, AppHandle, Manager};
+
+use tauri::menu::{MenuBuilder, MenuItemBuilder};
+
 use tauri_plugin_autostart::MacosLauncher;
 
 #[derive(Clone, serde::Serialize)]
@@ -16,55 +17,73 @@ struct Payload {
 }
 
 fn main() {
-    let tray = create_tray_menu();
-    let context = tauri::generate_context!();
-
     tauri::Builder::default()
+        .plugin(tauri_plugin_dialog::init())
+        .plugin(tauri_plugin_updater::Builder::new().build())
+        .plugin(tauri_plugin_global_shortcut::Builder::new().build())
+        .plugin(tauri_plugin_process::init())
+        .plugin(tauri_plugin_cli::init())
+        .plugin(tauri_plugin_clipboard_manager::init())
         .plugin(tauri_plugin_autostart::init(
             MacosLauncher::LaunchAgent,
-            Some(vec!["--hidden"]),
+            Some(vec!["--start-hidden"]),
         ))
         .plugin(tauri_plugin_single_instance::init(|app, argv, cwd| {
-            app.emit_all("single-instance", Payload { args: argv, cwd })
+            app.emit("single-instance", Payload { args: argv, cwd })
                 .unwrap();
         }))
-        .system_tray(tray)
-        .on_system_tray_event(|app, event| match event {
-            SystemTrayEvent::LeftClick { .. } => toggle_window(app),
-
-            SystemTrayEvent::MenuItemClick { id, .. } => match id.as_str() {
-                "quit" => std::process::exit(0),
-                "toggle" => toggle_window(app),
-                "settings" => open_settings_window(app),
-                _ => {}
-            },
-            _ => {}
+        .setup(|app| {
+            configure_tray_menu(&app)?;
+            Ok(())
         })
-        .run(context)
+        .run(tauri::generate_context!())
         .expect("error while running tauri application");
 }
 
-fn create_tray_menu() -> SystemTray {
-    let quit = CustomMenuItem::new("quit".to_string(), "Quit");
-    let toggle = CustomMenuItem::new("toggle".to_string(), "Toggle App");
-    let settings = CustomMenuItem::new("settings".to_string(), "Settings");
+fn configure_tray_menu(app: &App) -> Result<(), tauri::Error> {
+    let quit = MenuItemBuilder::new("Quit".to_string())
+        .id("quit")
+        .build(app)?;
+    let toggle = MenuItemBuilder::new("Toggle".to_string())
+        .id("toggle")
+        .build(app)?;
+    let settings = MenuItemBuilder::new("Settings".to_string())
+        .id("settings")
+        .build(app)?;
 
-    let tray_menu = SystemTrayMenu::new()
-        .add_item(settings)
-        .add_item(toggle)
-        .add_native_item(SystemTrayMenuItem::Separator)
-        .add_item(quit);
+    let tray_menu = MenuBuilder::new(app)
+        .items(&[&settings, &toggle, &quit])
+        .build()?;
 
-    SystemTray::new().with_menu(tray_menu)
+    let tray_icon = app.tray_by_id("main").unwrap();
+
+    tray_icon.set_menu(Some(tray_menu))?;
+
+    tray_icon.on_menu_event(|app, event| match event.id.as_ref() {
+        "quit" => std::process::exit(0),
+        "toggle" => toggle_window(app),
+        "settings" => open_settings_window(app),
+        _ => {}
+    });
+
+    tray_icon.on_tray_icon_event(|tray, event| {
+        if event.click_type == ClickType::Left {
+            let app = tray.app_handle();
+            toggle_window(app);
+        }
+    });
+
+    Ok(())
 }
 
 fn toggle_window(app: &AppHandle) {
-    let window = app.get_window("main").unwrap();
+    let window = app.get_webview_window("main").unwrap();
     if window.is_visible().unwrap() {
         window.hide().unwrap();
         return;
     } else {
         window.show().unwrap();
+        window.set_focus().unwrap();
         return;
     }
 }

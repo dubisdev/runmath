@@ -1,5 +1,5 @@
 import { useCalculatorStore } from "@state/calculator";
-import { writeText } from "@tauri-apps/api/clipboard";
+import { writeText } from "@tauri-apps/plugin-clipboard-manager";
 import { useEffect } from "react";
 
 export const useCopyToClipboardSubscription = () => {

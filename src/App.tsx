@@ -9,11 +9,9 @@ export function App() {
   useBakgroundColor();
 
   return (
-    <div data-tauri-drag-region className={styles.appContainer}>
-      <div className={styles.inputBoxLayout}>
-        <ConsoleInput />
-        <ConsoleResult />
-      </div>
+    <div data-tauri-drag-region className={styles.inputBoxLayout}>
+      <ConsoleInput />
+      <ConsoleResult />
     </div>
   );
 }

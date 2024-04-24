@@ -3,91 +3,62 @@
   "build": {
     "beforeBuildCommand": "pnpm build",
     "beforeDevCommand": "pnpm dev",
-    "devPath": "http://localhost:3000",
-    "distDir": "../dist"
+    "frontendDist": "../dist",
+    "devUrl": "http://localhost:3000"
   },
-  "package": {
-    "productName": "RunMath",
-    "version": "../package.json"
-  },
-  "tauri": {
-    "systemTray": {
-      "iconPath": "icons/app-icon.png"
+  "bundle": {
+    "active": true,
+    "category": "Utility",
+    "publisher": "dubis.dev",
+    "copyright": "David Jiménez Ⓒ 2024",
+    "icon": [
+      "icons/32x32.png",
+      "icons/128x128.png",
+      "icons/128x128@2x.png",
+      "icons/icon.icns",
+      "icons/icon.ico"
+    ],
+    "windows": {
+      "nsis": {
+        "installerIcon": "icons/icon.ico"
+      }
     },
+    "longDescription": "Do math, quickly 🚀",
+    "targets": [
+      "msi",
+      "nsis",
+      "updater"
+    ]
+  },
+  "productName": "RunMath",
+  "version": "../package.json",
+  "identifier": "dev.dubis.runmath",
+  "plugins": {
     "cli": {
       "args": [
         {
-          "name": "hidden",
-          "short": "h"
+          "name": "start-hidden",
+          "short": "s"
         }
       ]
     },
-    "allowlist": {
-      "globalShortcut": {
-        "all": true
-      },
-      "clipboard": {
-        "writeText": true
-      },
-      "process": {
-        "exit": true
-      },
-      "window": {
-        "create": true,
-        "hide": true,
-        "close": true,
-        "unminimize": true,
-        "setFocus": true,
-        "show": true,
-        "startDragging": true,
-        "setSize": true
-      },
-      "notification": {
-        "all": true
-      },
-      "shell": {
-        "open": true
-      }
-    },
-    "bundle": {
-      "active": true,
-      "category": "Utility",
-      "publisher": "dubis.dev",
-      "copyright": "David Jiménez Ⓒ 2024",
-      "icon": [
-        "icons/32x32.png",
-        "icons/128x128.png",
-        "icons/128x128@2x.png",
-        "icons/icon.icns",
-        "icons/icon.ico"
-      ],
-      "identifier": "dev.dubis.runmath",
-      "longDescription": "Do math, quickly 🚀",
-      "targets": [
-        "msi",
-        "nsis",
-        "updater"
-      ],
-      "windows": {
-        "nsis": {
-          "installerIcon": "icons/icon.ico"
-        }
-      }
-    },
-    "security": {
-      "dangerousDisableAssetCspModification": true,
-      "csp": "default-src 'self'; style-src 'self' 'unsafe-inline';connect-src api.github.com"
-    },
     "updater": {
-      "active": true,
+      "pubkey": "dW50cnVzdGVkIGNvbW1lbnQ6IG1pbmlzaWduIHB1YmxpYyBrZXk6IDFBMzM2NDgwQjQwQzFEOApSV1RZd1VBTFNEYWpBWFpMTlIxSzVYdEhjSDFqTTdPcFkwUEQzVHFsWlZ6a1dGRGFKdHY0UFBmbQo=",
       "endpoints": [
         "https://github.com/dubisdev/runmath/releases/latest/download/latest.json"
       ],
-      "dialog": true,
-      "pubkey": "dW50cnVzdGVkIGNvbW1lbnQ6IG1pbmlzaWduIHB1YmxpYyBrZXk6IDFBMzM2NDgwQjQwQzFEOApSV1RZd1VBTFNEYWpBWFpMTlIxSzVYdEhjSDFqTTdPcFkwUEQzVHFsWlZ6a1dGRGFKdHY0UFBmbQo=",
       "windows": {
         "installMode": "passive"
       }
+    }
+  },
+  "app": {
+    "security": {
+      "dangerousDisableAssetCspModification": true,
+      "csp": "default-src 'self'; style-src 'self' 'unsafe-inline';connect-src ipc: http://ipc.localhost api.github.com"
+    },
+    "trayIcon": {
+      "iconPath": "icons/app-icon.png"
     },
     "windows": [
       {
