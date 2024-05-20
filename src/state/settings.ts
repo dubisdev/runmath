@@ -1,27 +1,21 @@
-import type { FormatOptions } from "mathjs"
 import { create } from "zustand";
 import { persist, subscribeWithSelector } from "zustand/middleware";
 import { share } from "shared-zustand";
 import { configureRunOnStart } from "@utils/configureRunOnStart";
 import { useCalculatorStore } from "./calculator";
 import { getCurrent } from "@tauri-apps/api/window";
+import { CalculatorSettings } from "../app/calculator/domain/CalculatorSettings";
 
-export type CalculationOptions = {
-    useBigNumbers: boolean;
-    notation: FormatOptions["notation"];
-}
-
-type RunmathSettings = CalculationOptions & {
+type RunmathSettings = CalculatorSettings & {
     backgroundColor: string;
     runOnWindowsStart: boolean;
-
 }
 
 const defaultSettings: Readonly<RunmathSettings> = Object.freeze({
     backgroundColor: "#a3c8ff",
     runOnWindowsStart: false,
     useBigNumbers: false,
-    notation: undefined
+    notation: "auto"
 })
 
 type SettingsState = RunmathSettings & {
