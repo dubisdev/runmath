@@ -10,6 +10,8 @@
     "main"
   ],
   "permissions": [
+    "dialog:allow-ask",
+    "dialog:allow-confirm",
     "event:allow-listen",
     "menu:default",
     "tray:default",
