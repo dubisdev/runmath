@@ -3,15 +3,15 @@ import { FormatOptions } from "mathjs"
 import { ChangeEventHandler } from "react";
 import styles from "./index.module.css";
 
-const AVAILABLE_NOTATIONS: FormatOptions["notation"][] = ["fixed", "exponential", "engineering", undefined];
+const AVAILABLE_NOTATIONS = ["fixed", "exponential", "engineering", undefined] satisfies FormatOptions["notation"][];
 
 export const FormatSelector = () => {
     const notation = useSettingsStore(s => s.notation);
     const setNotation = useSettingsStore(s => s.setNotation);
 
     const handleChange: ChangeEventHandler<HTMLSelectElement> = (e) => {
-        const newValue = e.target.value as FormatOptions["notation"];
-        setNotation(newValue);
+        const newValue = e.target.value as typeof AVAILABLE_NOTATIONS[number];
+        setNotation(newValue || "auto");
     }
 
     return (
