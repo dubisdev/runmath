@@ -44,7 +44,7 @@ export const Settings = () => {
 
   const handleExitSettings = () => {
     import("@tauri-apps/api/window").then((module) =>
-      module.getCurrent().close()
+      module.getCurrentWindow().close()
     );
   };
 

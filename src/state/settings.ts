@@ -3,7 +3,7 @@ import { persist, subscribeWithSelector } from "zustand/middleware";
 import { share } from "shared-zustand";
 import { configureRunOnStart } from "@utils/configureRunOnStart";
 import { useCalculatorStore } from "./calculator";
-import { getCurrent } from "@tauri-apps/api/window";
+import { getCurrentWindow } from "@tauri-apps/api/window";
 import { CalculatorSettings } from "../app/calculator/domain/CalculatorSettings";
 
 type RunmathSettings = CalculatorSettings & {
@@ -62,7 +62,7 @@ if ("BroadcastChannel" in globalThis) {
 }
 
 // Force re-render to calculate when notation or useBigNumbers changes
-if (getCurrent().label === "main") {
+if (getCurrentWindow().label === "main") {
     useSettingsStore.subscribe(
         async (newState, prevState) => {
             const isNewNotation = newState.notation !== prevState.notation;

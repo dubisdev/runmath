@@ -1,4 +1,4 @@
-import { register, unregister } from "@tauri-apps/plugin-global-shortcut";
+import { register, unregister, unregisterAll } from "@tauri-apps/plugin-global-shortcut";
 import { listen } from "@tauri-apps/api/event";
 import { exit } from "@tauri-apps/plugin-process";
 import { createSettingsPage } from "./createSettingsPage";
@@ -6,8 +6,8 @@ import { toggleWindowVisibility } from "./toggleWindowView";
 
 export const configureShortcuts = async () => {
   try {
-    await unregister("Alt+m");
-  } catch {} // first time it will throw an error, so we ignore it
+    await unregisterAll();
+  } catch { } // first time it will throw an error, so we ignore it
 
   listen("open-settings", () => {
     createSettingsPage();

@@ -26,9 +26,9 @@
     "longDescription": "Do math, quickly 🚀",
     "targets": [
       "msi",
-      "nsis",
-      "updater"
-    ]
+      "nsis"
+    ],
+    "createUpdaterArtifacts": true
   },
   "productName": "RunMath",
   "version": "../package.json",

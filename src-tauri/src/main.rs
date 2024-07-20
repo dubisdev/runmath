@@ -3,8 +3,11 @@
     windows_subsystem = "windows"
 )]
 
-use tauri::tray::ClickType;
-use tauri::{App, AppHandle, Manager};
+use std::any::Any;
+
+use tauri::ipc::IpcResponse;
+use tauri::tray::{MouseButton, MouseButtonState, TrayIconEvent};
+use tauri::{App, AppHandle, Emitter, Manager};
 
 use tauri::menu::{MenuBuilder, MenuItemBuilder};
 
@@ -67,7 +70,12 @@ fn configure_tray_menu(app: &App) -> Result<(), tauri::Error> {
     });
 
     tray_icon.on_tray_icon_event(|tray, event| {
-        if event.click_type == ClickType::Left {
+        if let TrayIconEvent::Click {
+            button: MouseButton::Left,
+            button_state: MouseButtonState::Up,
+            ..
+        } = event
+        {
             let app = tray.app_handle();
             toggle_window(app);
         }

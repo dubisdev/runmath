@@ -1,7 +1,7 @@
-import { getCurrent } from "@tauri-apps/api/window";
+import { getCurrentWindow } from "@tauri-apps/api/window";
 
 export const toggleWindowVisibility = async () => {
-  const appWindow = getCurrent();
+  const appWindow = getCurrentWindow();
 
   if (await appWindow.isVisible()) {
     await appWindow.hide();
