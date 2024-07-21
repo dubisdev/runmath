@@ -26,11 +26,11 @@
     height: 100%;
     font-size: xx-large;
     position: absolute;
-    width: 100%;
+    width: 95%;
     z-index: 0;
     color: rgba(39, 39, 39, 0.525);
     top: 0;
-    left: 0;
+    left: 2.5%;
 }
 
 .subconsoleResult {
