@@ -3,9 +3,6 @@
     windows_subsystem = "windows"
 )]
 
-use std::any::Any;
-
-use tauri::ipc::IpcResponse;
 use tauri::tray::{MouseButton, MouseButtonState, TrayIconEvent};
 use tauri::{App, AppHandle, Emitter, Manager};
 
