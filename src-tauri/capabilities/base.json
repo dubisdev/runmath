@@ -19,7 +19,6 @@
     "process:allow-exit",
     "process:allow-restart",
     "global-shortcut:allow-register",
-    "global-shortcut:allow-unregister",
     "global-shortcut:allow-unregister-all",
     "clipboard-manager:allow-write-text",
     "window:allow-start-dragging",
