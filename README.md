@@ -22,7 +22,7 @@
 
 <p align="center">
   <img
-      src="https://img.shields.io/github/v/tag/dubisdev/runmath?label=Version&style=flat-square"
+      src="https://img.shields.io/github/package-json/v/dubisdev/runmath?label=Version&style=flat-square"
       alt="Last available version" />
   <img
       src="https://img.shields.io/github/downloads/dubisdev/runmath/total.svg?style=flat-square&color=blue&label=Downloads"
