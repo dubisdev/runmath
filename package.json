@@ -22,7 +22,7 @@
     "@tauri-apps/plugin-updater": "latest",
     "@tauri-apps/plugin-dialog": "latest",
     "just-debounce": "1.1.0",
-    "mathjs": "13.0.3",
+    "mathjs": "13.1.0",
     "react": "18.3.1",
     "react-colorful": "5.6.1",
     "react-dom": "18.3.1",
@@ -34,12 +34,12 @@
   },
   "devDependencies": {
     "@tauri-apps/cli": "next",
-    "@types/node": "22.4.0",
-    "@types/react": "18.3.3",
+    "@types/node": "22.5.0",
+    "@types/react": "18.3.4",
     "@types/react-dom": "18.3.0",
     "@vitejs/plugin-react": "4.3.1",
     "typescript": "5.5.4",
-    "vite": "5.4.1"
+    "vite": "5.4.2"
   },
   "engines": {
     "node": ">=22"
