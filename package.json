@@ -1,7 +1,7 @@
 {
   "name": "runmath",
   "private": true,
-  "version": "1.16.4",
+  "version": "1.16.5",
   "license": "MIT",
   "type": "module",
   "scripts": {
