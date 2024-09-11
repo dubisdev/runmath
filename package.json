@@ -22,24 +22,24 @@
     "@tauri-apps/plugin-updater": "latest",
     "@tauri-apps/plugin-dialog": "latest",
     "just-debounce": "1.1.0",
-    "mathjs": "13.1.0",
+    "mathjs": "13.1.1",
     "react": "18.3.1",
     "react-colorful": "5.6.1",
     "react-dom": "18.3.1",
     "react-switch": "7.0.0",
     "react-textra": "0.2.0",
     "shared-zustand": "2.0.0",
-    "the-new-css-reset": "1.11.2",
+    "the-new-css-reset": "1.11.3",
     "zustand": "4.5.5"
   },
   "devDependencies": {
     "@tauri-apps/cli": "next",
-    "@types/node": "22.5.0",
-    "@types/react": "18.3.4",
+    "@types/node": "22.5.4",
+    "@types/react": "18.3.5",
     "@types/react-dom": "18.3.0",
     "@vitejs/plugin-react": "4.3.1",
-    "typescript": "5.5.4",
-    "vite": "5.4.2"
+    "typescript": "5.6.2",
+    "vite": "5.4.4"
   },
   "engines": {
     "node": ">=22"
