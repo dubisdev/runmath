@@ -13,7 +13,7 @@
   },
   "dependencies": {
     "@dubisdev/pointer-stack-structure": "1.1.1",
-    "@tauri-apps/api": "next",
+    "@tauri-apps/api": "2.0.1",
     "@tauri-apps/plugin-autostart": "latest",
     "@tauri-apps/plugin-cli": "latest",
     "@tauri-apps/plugin-clipboard-manager": "latest",
@@ -22,7 +22,7 @@
     "@tauri-apps/plugin-updater": "latest",
     "@tauri-apps/plugin-dialog": "latest",
     "just-debounce": "1.1.0",
-    "mathjs": "13.1.1",
+    "mathjs": "13.2.0",
     "react": "18.3.1",
     "react-colorful": "5.6.1",
     "react-dom": "18.3.1",
@@ -33,13 +33,13 @@
     "zustand": "4.5.5"
   },
   "devDependencies": {
-    "@tauri-apps/cli": "next",
-    "@types/node": "22.5.4",
-    "@types/react": "18.3.5",
+    "@tauri-apps/cli": "2.0.0",
+    "@types/node": "22.7.4",
+    "@types/react": "18.3.11",
     "@types/react-dom": "18.3.0",
-    "@vitejs/plugin-react": "4.3.1",
+    "@vitejs/plugin-react": "4.3.2",
     "typescript": "5.6.2",
-    "vite": "5.4.4"
+    "vite": "5.4.8"
   },
   "engines": {
     "node": ">=22"
