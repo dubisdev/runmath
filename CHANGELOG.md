@@ -1,5 +1,12 @@
 # Changelog
 
+## [1.16.7](https://github.com/dubisdev/runmath/compare/runmath-v1.16.6...runmath-v1.16.7) (2024-10-02)
+
+
+### Bug Fixes
+
+* Update to Tauri v2 ([61d8de7](https://github.com/dubisdev/runmath/commit/61d8de7f933bd253f9d67caa1c63f109aa2d999f))
+
 ## [1.16.6](https://github.com/dubisdev/runmath/compare/runmath-v1.16.5...runmath-v1.16.6) (2024-09-11)
 
 
