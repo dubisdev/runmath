@@ -5,7 +5,9 @@ import { InputPlaceholder } from "./InputPlaceholder";
 
 export const ConsoleInput = () => {
   const { getHistoryActionResult, isHistoryAction } = useHistory();
-  const [input, setInput] = useCalculatorStore((s) => [s.input, s.setInput]);
+
+  const input = useCalculatorStore((s) => s.input);
+  const setInput = useCalculatorStore((s) => s.setInput);
 
   const handleChange = (e: React.ChangeEvent<HTMLInputElement>) => {
     setInput(e.target.value);

@@ -57,7 +57,7 @@ const useSettingsStore = create<SettingsState>()(
 
 if ("BroadcastChannel" in globalThis) {
     for (const key in defaultSettings) {
-        share(key, useSettingsStore);
+        share(key as keyof RunmathSettings, useSettingsStore);
     }
 }
 

@@ -23,20 +23,20 @@
     "@tauri-apps/plugin-updater": "2.3.0",
     "just-debounce": "1.1.0",
     "mathjs": "14.0.1",
-    "react": "18.3.1",
+    "react": "19.0.0",
     "react-colorful": "5.6.1",
-    "react-dom": "18.3.1",
+    "react-dom": "19.0.0",
     "react-switch": "7.1.0",
     "react-textra": "0.2.0",
     "shared-zustand": "2.1.0",
     "the-new-css-reset": "1.11.3",
-    "zustand": "4.5.5"
+    "zustand": "5.0.2"
   },
   "devDependencies": {
     "@tauri-apps/cli": "2.0.0",
     "@types/node": "22.10.2",
-    "@types/react": "18.3.11",
-    "@types/react-dom": "18.3.0",
+    "@types/react": "19.0.2",
+    "@types/react-dom": "19.0.2",
     "@vitejs/plugin-react": "4.3.4",
     "typescript": "5.7.2",
     "vite": "6.0.5"

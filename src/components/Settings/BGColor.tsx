@@ -3,7 +3,8 @@ import "./bgcolor.css";
 import { useSettingsStore } from "@state/settings";
 
 export const BGColor = () => {
-  const [backgroundColor, setBackgroundColor] = useSettingsStore(s => [s.backgroundColor, s.setBackgrounColor]);
+  const backgroundColor = useSettingsStore((s) => s.backgroundColor);
+  const setBackgroundColor = useSettingsStore((s) => s.setBackgrounColor);
 
   const handlePickerChange = (color: string) => {
     setBackgroundColor(color);
