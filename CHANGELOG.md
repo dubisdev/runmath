@@ -1,5 +1,17 @@
 # Changelog
 
+## [1.17.0](https://github.com/dubisdev/runmath/compare/runmath-v1.16.7...runmath-v1.17.0) (2024-12-22)
+
+
+### Features
+
+* Add option to hide on Enter [#19](https://github.com/dubisdev/runmath/issues/19) ([49112d6](https://github.com/dubisdev/runmath/commit/49112d6cff1a422bbeafe58d8eda856806d7a0ee))
+
+
+### Bug Fixes
+
+* Updgrade to React 19 ([2b46874](https://github.com/dubisdev/runmath/commit/2b468743b39b95495a88b536b708ba6b0096d743))
+
 ## [1.16.7](https://github.com/dubisdev/runmath/compare/runmath-v1.16.6...runmath-v1.16.7) (2024-10-02)
 
 
