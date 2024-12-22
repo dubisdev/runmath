@@ -1,5 +1,5 @@
 {
-  "$schema": "../node_modules/@tauri-apps/cli/schema.json",
+  "$schema": "../node_modules/@tauri-apps/cli/config.schema.json",
   "build": {
     "beforeBuildCommand": "pnpm build",
     "beforeDevCommand": "pnpm dev",
@@ -65,7 +65,7 @@
         "title": "RunMath",
         "alwaysOnTop": true,
         "fullscreen": false,
-        "height": 46,
+        "height": 10,
         "resizable": false,
         "width": 700,
         "center": true,
