@@ -66,6 +66,7 @@ Configure the app to your liking! For now, you can change:
 - Run app on startup or not
 - Use Big Numbers (for calculations with big numbers > 15 digits)
 - Output format (scientific, fixed, engineering, auto)
+- Hide on Enter
 
 ## 🔐 Privacy Policy
 
