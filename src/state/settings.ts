@@ -9,13 +9,15 @@ import { CalculatorSettings } from "../app/calculator/domain/CalculatorSettings"
 type RunmathSettings = CalculatorSettings & {
     backgroundColor: string;
     runOnWindowsStart: boolean;
+    hideOnEnter: boolean;
 }
 
 const defaultSettings: Readonly<RunmathSettings> = Object.freeze({
     backgroundColor: "#a3c8ff",
     runOnWindowsStart: false,
     useBigNumbers: false,
-    notation: "auto"
+    notation: "auto",
+    hideOnEnter: false
 })
 
 type SettingsState = RunmathSettings & {
@@ -23,6 +25,7 @@ type SettingsState = RunmathSettings & {
     setRunOnWindowsStart: (runOnWindowsStart: RunmathSettings["runOnWindowsStart"]) => void;
     setUseBigNumbers: (useBigNumbers: RunmathSettings["useBigNumbers"]) => void;
     setNotation: (notation: RunmathSettings["notation"]) => void;
+    setHideOnEnter: (hideOnEnter: RunmathSettings["hideOnEnter"]) => void;
     reset: () => void;
 }
 
@@ -44,13 +47,25 @@ const useSettingsStore = create<SettingsState>()(
 
                 setNotation: (notation) => set({ notation }),
 
+                setHideOnEnter: (hideOnEnter) => set({ hideOnEnter }),
+
                 reset: () => {
                     configureRunOnStart(defaultSettings.runOnWindowsStart);
                     set(defaultSettings)
                 }
             }),
 
-            { name: "runmath-settings" }
+            {
+                name: "runmath-settings",
+                version: 1,
+                migrate(persistedState, version) {
+                    if (version === 1) {
+                        (persistedState as RunmathSettings).hideOnEnter = false;
+
+                        return persistedState;
+                    }
+                },
+            }
         )
     )
 );

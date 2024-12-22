@@ -4,6 +4,7 @@ import { BGColor } from "./BGColor";
 import { RunOnStart } from "./RunOnStart";
 import { UseBigNumbers } from "./UseBigNumbers";
 import { FormatSelector } from "./FormatSelector";
+import { HideOnEnter } from "./HideOnEnter";
 
 const SETTINGS = [
   {
@@ -26,6 +27,11 @@ const SETTINGS = [
     name: "Background Color",
     description: "Change the background color of the app",
     SettingElement: BGColor,
+  },
+  {
+    name: "Hide RunMath on enter",
+    description: "After the result is calculated, RunMath will copy the result to the clipboard and hide the window.",
+    SettingElement: HideOnEnter,
   },
   {
     name: "Start RunMath on Windows Start",
