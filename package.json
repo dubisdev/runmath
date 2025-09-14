@@ -13,36 +13,36 @@
   },
   "dependencies": {
     "@dubisdev/pointer-stack-structure": "1.1.1",
-    "@tauri-apps/api": "2.5.0",
-    "@tauri-apps/plugin-autostart": "2.4.0",
-    "@tauri-apps/plugin-cli": "2.2.1",
-    "@tauri-apps/plugin-clipboard-manager": "2.2.3",
-    "@tauri-apps/plugin-dialog": "2.2.2",
-    "@tauri-apps/plugin-global-shortcut": "2.2.1",
-    "@tauri-apps/plugin-process": "2.2.2",
-    "@tauri-apps/plugin-updater": "2.8.1",
+    "@tauri-apps/api": "2.8.0",
+    "@tauri-apps/plugin-autostart": "2.5.0",
+    "@tauri-apps/plugin-cli": "2.4.0",
+    "@tauri-apps/plugin-clipboard-manager": "2.3.0",
+    "@tauri-apps/plugin-dialog": "2.4.0",
+    "@tauri-apps/plugin-global-shortcut": "2.3.0",
+    "@tauri-apps/plugin-process": "2.3.0",
+    "@tauri-apps/plugin-updater": "2.9.0",
     "just-debounce": "1.1.0",
-    "mathjs": "14.5.2",
-    "react": "19.1.0",
+    "mathjs": "14.7.0",
+    "react": "19.1.1",
     "react-colorful": "5.6.1",
-    "react-dom": "19.1.0",
+    "react-dom": "19.1.1",
     "react-switch": "7.1.0",
     "react-textra": "0.2.0",
     "shared-zustand": "2.1.0",
     "the-new-css-reset": "1.11.3",
-    "zustand": "5.0.5"
+    "zustand": "5.0.8"
   },
   "devDependencies": {
-    "@tauri-apps/cli": "2.5.0",
-    "@types/node": "22.15.32",
-    "@types/react": "19.1.8",
-    "@types/react-dom": "19.1.6",
-    "@vitejs/plugin-react": "4.5.2",
-    "typescript": "5.8.3",
-    "vite": "6.3.5"
+    "@tauri-apps/cli": "2.8.4",
+    "@types/node": "24.4.0",
+    "@types/react": "19.1.13",
+    "@types/react-dom": "19.1.9",
+    "@vitejs/plugin-react": "5.0.2",
+    "typescript": "5.9.2",
+    "vite": "7.1.5"
   },
   "engines": {
-    "node": ">=22"
+    "node": ">=24"
   },
   "repository": "dubisdev/runmath"
 }
