@@ -1,5 +1,12 @@
 # Changelog
 
+## [1.17.2](https://github.com/dubisdev/runmath/compare/runmath-v1.17.1...runmath-v1.17.2) (2025-09-14)
+
+
+### Bug Fixes
+
+* Update deps & GH workflows ([86869c8](https://github.com/dubisdev/runmath/commit/86869c81821024c516281e3bef7a2cdd9934245e))
+
 ## [1.17.1](https://github.com/dubisdev/runmath/compare/runmath-v1.17.0...runmath-v1.17.1) (2025-06-19)
 
 
