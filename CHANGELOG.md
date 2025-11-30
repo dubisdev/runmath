@@ -1,5 +1,12 @@
 # Changelog
 
+## [1.17.3](https://github.com/dubisdev/runmath/compare/runmath-v1.17.2...runmath-v1.17.3) (2025-11-30)
+
+
+### Bug Fixes
+
+* Update deps (includes security updates + new MathJS 15 version) ([d0d101c](https://github.com/dubisdev/runmath/commit/d0d101c9584aa6c8eb72ffe0c8d5a9ce5d94644e))
+
 ## [1.17.2](https://github.com/dubisdev/runmath/compare/runmath-v1.17.1...runmath-v1.17.2) (2025-09-14)
 
 
