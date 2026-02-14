@@ -16,8 +16,7 @@
   <a href="https://github.com/dubisdev/runmath/releases/latest">
     🔗 Go to Download Page
   </a>
-    &nbsp; | &nbsp; Give it a Star ⭐ | &nbsp;
-    <a href="https://www.buymeacoffee.com/dubisdev">Support the project 🤝</a>
+    &nbsp; | &nbsp; Give it a Star ⭐
 </p>
 
 <p align="center">
