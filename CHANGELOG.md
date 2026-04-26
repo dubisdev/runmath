@@ -1,5 +1,12 @@
 # Changelog
 
+## [1.17.5](https://github.com/dubisdev/runmath/compare/runmath-v1.17.4...runmath-v1.17.5) (2026-04-26)
+
+
+### Bug Fixes
+
+* Update dependencies ([fa689db](https://github.com/dubisdev/runmath/commit/fa689db500b646a808ca9acdcc5d6ae51ce13d6e))
+
 ## [1.17.4](https://github.com/dubisdev/runmath/compare/runmath-v1.17.3...runmath-v1.17.4) (2026-01-05)
 
 
