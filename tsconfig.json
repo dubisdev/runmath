@@ -2,6 +2,9 @@
   "compilerOptions": {
     "target": "ESNext",
     "useDefineForClassFields": true,
+    "types": [
+      "vite/client"
+    ],
     "lib": [
       "DOM",
       "DOM.Iterable",
@@ -9,7 +12,6 @@
     ],
     "allowJs": false,
     "skipLibCheck": true,
-    "esModuleInterop": false,
     "allowSyntheticDefaultImports": true,
     "strict": true,
     "forceConsistentCasingInFileNames": true,
@@ -19,6 +21,7 @@
     "isolatedModules": true,
     "noEmit": true,
     "jsx": "react-jsx",
+    "rootDir": "./src",
     "paths": {
       "@components/*": [
         "./src/components/*"

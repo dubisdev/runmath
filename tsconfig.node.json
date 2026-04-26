@@ -1,5 +1,8 @@
 {
   "compilerOptions": {
+    "types": [
+      "node"
+    ],
     "composite": true,
     "module": "esnext",
     "moduleResolution": "Bundler"

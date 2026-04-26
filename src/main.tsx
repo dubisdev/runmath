@@ -1,5 +1,5 @@
-import React from "react";
-import ReactDOM from "react-dom/client";
+import { StrictMode } from "react";
+import { createRoot } from "react-dom/client";
 import { App } from "./App";
 import { getMatches } from "@tauri-apps/plugin-cli";
 import { getCurrentWindow } from "@tauri-apps/api/window";
@@ -13,10 +13,10 @@ getMatches().then((matches) => {
   }
 })
 
-ReactDOM.createRoot(document.getElementById("root")!).render(
-  <React.StrictMode>
+createRoot(document.getElementById("root")!).render(
+  <StrictMode>
     <App />
-  </React.StrictMode>
+  </StrictMode>
 );
 
 import("@utils/configureShortcuts").then((module) =>
