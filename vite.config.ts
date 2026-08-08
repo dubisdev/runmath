@@ -9,8 +9,8 @@ export default defineConfig({
     target: "esnext",
     rollupOptions: {
       input: {
-        main: resolve(__dirname, "index.html"),
-        settings: resolve(__dirname, "settings.html"),
+        main: resolve(import.meta.dirname, "index.html"),
+        settings: resolve(import.meta.dirname, "settings.html"),
       },
     },
   },
@@ -18,10 +18,10 @@ export default defineConfig({
     alias: [
       {
         find: "@components",
-        replacement: resolve(__dirname, "src", "components"),
+        replacement: resolve(import.meta.dirname, "src", "components"),
       },
-      { find: "@utils", replacement: resolve(__dirname, "src", "utils") },
-      { find: "@state", replacement: resolve(__dirname, "src", "state") },
+      { find: "@utils", replacement: resolve(import.meta.dirname, "src", "utils") },
+      { find: "@state", replacement: resolve(import.meta.dirname, "src", "state") },
     ],
   },
   server: {
